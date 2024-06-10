@@ -1,0 +1,82 @@
+Index: app/src/main/java/com/example/fyp_ilikethatcoffee/StoreOwnerProfileActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.fyp_ilikethatcoffee;\r\n\r\nimport android.app.ProgressDialog;\r\nimport android.content.Intent;\r\nimport android.net.Uri;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\nimport android.widget.EditText;\r\nimport android.widget.ImageView;\r\nimport android.widget.TextView;\r\nimport android.widget.Toast;\r\n\r\nimport androidx.activity.EdgeToEdge;\r\nimport androidx.annotation.NonNull;\r\nimport androidx.annotation.Nullable;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\nimport androidx.core.graphics.Insets;\r\nimport androidx.core.view.ViewCompat;\r\nimport androidx.core.view.WindowInsetsCompat;\r\nimport androidx.navigation.NavController;\r\nimport androidx.navigation.Navigation;\r\nimport androidx.navigation.ui.AppBarConfiguration;\r\nimport androidx.navigation.ui.NavigationUI;\r\nimport androidx.viewpager.widget.ViewPager;\r\n\r\nimport com.example.fyp_ilikethatcoffee.databinding.ActivityMainBinding;\r\nimport com.example.fyp_ilikethatcoffee.profile.FavLocationFragment;\r\nimport com.example.fyp_ilikethatcoffee.profile.MyPagerAdapter;\r\nimport com.example.fyp_ilikethatcoffee.profile.ReviewFragment;\r\nimport com.google.android.gms.tasks.OnFailureListener;\r\nimport com.google.android.gms.tasks.OnSuccessListener;\r\nimport com.google.android.material.bottomnavigation.BottomNavigationView;\r\nimport com.google.android.material.tabs.TabLayout;\r\nimport com.google.firebase.auth.FirebaseAuth;\r\nimport com.google.firebase.auth.FirebaseUser;\r\nimport com.google.firebase.firestore.DocumentReference;\r\nimport com.google.firebase.firestore.FirebaseFirestore;\r\nimport com.google.firebase.storage.FirebaseStorage;\r\nimport com.google.firebase.storage.StorageReference;\r\nimport com.squareup.picasso.Picasso;\r\n\r\nimport java.util.HashMap;\r\nimport java.util.Map;\r\n\r\npublic class StoreOwnerProfileActivity extends AppCompatActivity {\r\n\r\n\r\n    private static final int RC_SIGN_IN = 201;\r\n\r\n    private static final int PICK_IMAGE_REQUEST = 111;\r\n\r\n    //Our nave Controller\r\n    private FirebaseAuth auth;\r\n    private FirebaseFirestore db; // Declare Firestore instance\r\n\r\n    private FirebaseStorage storage;\r\n    private StorageReference mImageRef;\r\n\r\n\r\n    private Uri imageUri;\r\n\r\n    private FirebaseUser user;\r\n\r\n    private ImageView profile_picture;\r\n\r\n    private ImageView addPost;\r\n    private TextView store_name;\r\n    private TextView store_desc;\r\n    private TextView store_address;\r\n\r\n    private Button update_profile_button, logoutBtn;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        EdgeToEdge.enable(this);\r\n        setContentView(R.layout.activity_store_owner_profile);\r\n\r\n\r\n        auth = FirebaseAuth.getInstance();\r\n        db = FirebaseFirestore.getInstance(); // Initialize Firestore instance\r\n        mImageRef = FirebaseStorage.getInstance().getReference().child(\"Store Profile Image\");\r\n\r\n        store_name = findViewById(R.id.store_name_p);\r\n        store_desc = findViewById(R.id.store_desc_p);\r\n        store_address = findViewById(R.id.store_address_p);\r\n        update_profile_button = findViewById(R.id.update_my_profile_button);\r\n        logoutBtn = findViewById(R.id.logout_button_store);\r\n        addPost = findViewById(R.id.add_post_icon);\r\n        ViewPager viewPager = findViewById(R.id.view_pager_store);\r\n        MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());\r\n\r\n        //Add three tabs\r\n        adapter.addFrag(new MenuFragment(), \"Menu\");\r\n        adapter.addFrag(new ReviewFragment(), \"Reviews\");\r\n        adapter.addFrag(new ReviewFragment(), \"Posts\");\r\n        viewPager.setAdapter(adapter);\r\n\r\n\r\n        TabLayout tabLayout = findViewById(R.id.tabs_store);\r\n        tabLayout.setupWithViewPager(viewPager);\r\n        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {\r\n            @Override\r\n            public void onTabSelected(TabLayout.Tab tab) {\r\n\r\n                viewPager.setCurrentItem(tab.getPosition());\r\n            }\r\n\r\n            @Override\r\n            public void onTabUnselected(TabLayout.Tab tab) {\r\n\r\n            }\r\n\r\n            @Override\r\n            public void onTabReselected(TabLayout.Tab tab) {\r\n\r\n            }\r\n        });\r\n\r\n        profile_picture = findViewById(R.id.store_profile_picture_p);\r\n        user = auth.getCurrentUser();\r\n        if (user == null){\r\n            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);\r\n            startActivity(intent);\r\n            finish();\r\n        }\r\n\r\n        db.collection(\"Store\").document(FirebaseAuth.getInstance().getCurrentUser().getEmail())\r\n                .get().addOnCompleteListener(task -> {\r\n                    if(task.isSuccessful() && task.getResult() != null){\r\n                        String storeName = task.getResult().getString(\"StoreName\");\r\n                        String storeDesc = task.getResult().getString(\"StoreDesc\");\r\n                        String storeAddress = task.getResult().getString(\"StoreAddress\");\r\n                        String image = task.getResult().getString(\"ImageUrl\");\r\n\r\n                        store_name.setText(storeName);\r\n                        store_desc.setText(storeDesc);\r\n                        store_address.setText(storeAddress);\r\n                        Picasso.get().load(image).into(profile_picture);\r\n                    }\r\n                    else{\r\n\r\n                    }\r\n                });\r\n\r\n        logoutBtn.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                auth.signOut();\r\n                Intent intent = new Intent(StoreOwnerProfileActivity.this, LoginActivity.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n\r\n\r\n        update_profile_button.setOnClickListener(new View.OnClickListener(){\r\n            @Override\r\n            public void onClick(View v) {\r\n\r\n                Intent intent = new Intent(getApplicationContext(), StoreOwnerUpdateProfileActivity.class);\r\n                startActivity(intent);\r\n                finish();\r\n            }\r\n        });\r\n\r\n        addPost.setOnClickListener(new View.OnClickListener(){\r\n            @Override\r\n            public void onClick(View v) {\r\n\r\n                Intent intent = new Intent(getApplicationContext(), StoreCreatePost.class);\r\n                startActivity(intent);\r\n                finish();\r\n            }\r\n        });\r\n\r\n\r\n\r\n        /*profile_picture.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                choosePicture();\r\n            }\r\n        });\r\n\r\n         */\r\n\r\n    }\r\n\r\n\r\n\r\n    private void choosePicture() {\r\n        Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);\r\n        startActivityForResult(intent, PICK_IMAGE_REQUEST);\r\n\r\n    }\r\n\r\n    private void getStoreProfileData(){\r\n\r\n        db.collection(\"Store\").document(FirebaseAuth.getInstance().getCurrentUser().getEmail())\r\n                .get().addOnCompleteListener(task -> {\r\n                    if(task.isSuccessful() && task.getResult() != null){\r\n                        String storeName = task.getResult().getString(\"StoreName\");\r\n                        String storeDesc = task.getResult().getString(\"StoreDesc\");\r\n                        String storeAddress = task.getResult().getString(\"StoreAddress\");\r\n\r\n                        store_name.setText(storeName);\r\n                        store_desc.setText(storeDesc);\r\n                        store_address.setText(storeAddress);\r\n                    }else{\r\n\r\n                    }\r\n                });\r\n    }\r\n\r\n    private void updateProfile(){\r\n        String storeName = store_name.getText().toString();\r\n        String storeDesc = store_desc.getText().toString();\r\n        String storeAddress = store_address.getText().toString();\r\n\r\n        DocumentReference docRef = db.collection(\"Store\").document(user.getEmail());\r\n        // Create a Map object with the updated data\r\n        Map<String, Object> updatedData = new HashMap<>();\r\n        updatedData.put(\"StoreName\", storeName);\r\n        updatedData.put(\"StoreDesc\", storeDesc);\r\n        updatedData.put(\"StoreAddress\", storeAddress);\r\n\r\n        // Update the document with the new data\r\n        docRef.update(updatedData)\r\n                .addOnSuccessListener(new OnSuccessListener<Void>() {\r\n                    @Override\r\n                    public void onSuccess(Void aVoid) {\r\n                        Toast.makeText(StoreOwnerProfileActivity.this, \"Store Profile Successfully Updated\", Toast.LENGTH_SHORT).show();\r\n                    }\r\n                })\r\n                .addOnFailureListener(new OnFailureListener() {\r\n                    @Override\r\n                    public void onFailure(@NonNull Exception e) {\r\n                        Toast.makeText(StoreOwnerProfileActivity.this, \"Store Profile failed to update\", Toast.LENGTH_SHORT).show();\r\n                    }\r\n                });\r\n    }\r\n\r\n\r\n\r\n    @Override\r\n    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {\r\n        super.onActivityResult(requestCode, resultCode, data);\r\n        if (requestCode == 1 && resultCode==RESULT_OK && data !=null && data.getData() !=null){\r\n            imageUri = data.getData();\r\n            profile_picture.setImageURI(imageUri);\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreOwnerProfileActivity.java b/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreOwnerProfileActivity.java
+--- a/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreOwnerProfileActivity.java	(revision 52f0538ebd3170471aac0d30187a98a852d87e4d)
++++ b/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreOwnerProfileActivity.java	(date 1712420025816)
+@@ -69,13 +69,13 @@
+     private TextView store_desc;
+     private TextView store_address;
+ 
+-    private Button update_profile_button, logoutBtn;
++    //private Button update_profile_button, logoutBtn;
+ 
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         EdgeToEdge.enable(this);
+-        setContentView(R.layout.activity_store_owner_profile);
++        setContentView(R.layout.activity_test_store_owner_profile);
+ 
+ 
+         auth = FirebaseAuth.getInstance();
+@@ -85,9 +85,9 @@
+         store_name = findViewById(R.id.store_name_p);
+         store_desc = findViewById(R.id.store_desc_p);
+         store_address = findViewById(R.id.store_address_p);
+-        update_profile_button = findViewById(R.id.update_my_profile_button);
+-        logoutBtn = findViewById(R.id.logout_button_store);
+-        addPost = findViewById(R.id.add_post_icon);
++        //update_profile_button = findViewById(R.id.update_my_profile_button);
++        //logoutBtn = findViewById(R.id.logout_button_store);
++        //addPost = findViewById(R.id.add_post_icon);
+         ViewPager viewPager = findViewById(R.id.view_pager_store);
+         MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());
+ 
+@@ -144,6 +144,7 @@
+                     }
+                 });
+ 
++        /*
+         logoutBtn.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+@@ -174,6 +175,8 @@
+             }
+         });
+ 
++         */
++
+ 
+ 
+         /*profile_picture.setOnClickListener(new View.OnClickListener() {
+Index: app/src/main/res/values/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources xmlns:tools=\"http://schemas.android.com/tools\">\r\n    <!-- Base application theme. -->\r\n    <style name=\"Theme.FYPILikeThatCoffee\" parent=\"Theme.MaterialComponents.DayNight.DarkActionBar\">\r\n        <!-- Primary brand color. -->\r\n        <item name=\"colorPrimary\">@color/purple_500</item>\r\n        <item name=\"colorPrimaryVariant\">@color/purple_700</item>\r\n        <item name=\"colorOnPrimary\">@color/white</item>\r\n        <!-- Secondary brand color. -->\r\n        <item name=\"colorSecondary\">@color/teal_200</item>\r\n        <item name=\"colorSecondaryVariant\">@color/teal_700</item>\r\n        <item name=\"colorOnSecondary\">@color/black</item>\r\n        <!-- Status bar color. -->\r\n        <item name=\"android:statusBarColor\">?attr/colorPrimaryVariant</item>\r\n        <!-- Customize your theme here. -->\r\n    </style>\r\n\r\n    <style name=\"CustomTabLayoutStyle\" parent=\"Widget.Design.TabLayout\">\r\n        <!-- Tab text color when not selected -->\r\n        <item name=\"tabTextColor\">@color/white</item>\r\n        <!-- Tab text color when selected -->\r\n        <item name=\"tabSelectedTextColor\">@color/white</item>\r\n    </style>\r\n\r\n\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/themes.xml b/app/src/main/res/values/themes.xml
+--- a/app/src/main/res/values/themes.xml	(revision 52f0538ebd3170471aac0d30187a98a852d87e4d)
++++ b/app/src/main/res/values/themes.xml	(date 1712336385905)
+@@ -14,6 +14,15 @@
+         <!-- Customize your theme here. -->
+     </style>
+ 
++    <style name="Circular">
++        <item name="cornerSize">50%</item>
++    </style>
++
++    <style name="RoundedSquare">
++        <item name="cornerSize">10%</item>
++    </style>
++
++
+     <style name="CustomTabLayoutStyle" parent="Widget.Design.TabLayout">
+         <!-- Tab text color when not selected -->
+         <item name="tabTextColor">@color/white</item>

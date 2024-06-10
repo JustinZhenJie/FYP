@@ -1,0 +1,53 @@
+Index: app/src/main/res/layout/item_user.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"wrap_content\"\n    android:orientation=\"vertical\"\n    android:padding=\"16dp\">\n\n    <TextView\n        android:id=\"@+id/textViewName\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"@string/UserAccountViewName\" />\n\n    <TextView\n        android:id=\"@+id/textViewUsername\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"@string/UserAccountViewUsername\" />\n\n    <TextView\n        android:id=\"@+id/textViewEmail\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"@string/UserAccountViewEmail\" />\n\n    <TextView\n        android:id=\"@+id/textViewUserType\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"@string/UserAccountViewUserType\" />\n</LinearLayout>\n
+===================================================================
+diff --git a/app/src/main/res/layout/item_user.xml b/app/src/main/res/layout/item_user.xml
+--- a/app/src/main/res/layout/item_user.xml	
++++ b/app/src/main/res/layout/item_user.xml	
+@@ -9,23 +9,23 @@
+         android:id="@+id/textViewName"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:text="@string/UserAccountViewName" />
++        android:text="UserAccountViewName" />
+ 
+     <TextView
+         android:id="@+id/textViewUsername"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:text="@string/UserAccountViewUsername" />
++        android:text="UserAccountViewUsername" />
+ 
+     <TextView
+         android:id="@+id/textViewEmail"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:text="@string/UserAccountViewEmail" />
++        android:text="UserAccountViewEmail" />
+ 
+     <TextView
+         android:id="@+id/textViewUserType"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:text="@string/UserAccountViewUserType" />
++        android:text="UserAccountViewUserType" />
+ </LinearLayout>
+Index: app/src/main/res/layout/progress_dialog.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    android:layout_width=\"wrap_content\"\n    android:layout_height=\"wrap_content\"\n    android:orientation=\"vertical\"\n    android:layout_gravity=\"center\">\n\n    <ProgressBar\n        android:id=\"@+id/progressBar\"\n        style=\"@style/Widget.AppCompat.ProgressBar\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_gravity=\"center\"\n        android:layout_marginBottom=\"16dp\"/>\n\n    <TextView\n        android:id=\"@+id/textViewLoading\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"@string/loading\"\n        android:layout_gravity=\"center\"/>\n\n</LinearLayout>\n
+===================================================================
+diff --git a/app/src/main/res/layout/progress_dialog.xml b/app/src/main/res/layout/progress_dialog.xml
+--- a/app/src/main/res/layout/progress_dialog.xml	
++++ b/app/src/main/res/layout/progress_dialog.xml	
+@@ -17,7 +17,7 @@
+         android:id="@+id/textViewLoading"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:text="@string/loading"
++        android:text="loading"
+         android:layout_gravity="center"/>
+ 
+ </LinearLayout>

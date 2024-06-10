@@ -1,0 +1,2207 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    android:id=\"@+id/container\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\">\r\n\r\n    <com.google.android.material.bottomnavigation.BottomNavigationView\r\n        android:id=\"@+id/nav_view\"\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"0dp\"\r\n        android:layout_marginEnd=\"0dp\"\r\n        android:background=\"?android:attr/windowBackground\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintLeft_toLeftOf=\"parent\"\r\n        app:layout_constraintRight_toRightOf=\"parent\"\r\n        app:menu=\"@menu/bottom_nav_menu\" />\r\n\r\n    <fragment\r\n        android:id=\"@+id/nav_host_fragment_activity_main\"\r\n        android:name=\"androidx.navigation.fragment.NavHostFragment\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"0dp\"\r\n        app:defaultNavHost=\"true\"\r\n        app:layout_constraintBottom_toTopOf=\"@id/nav_view\"\r\n        app:layout_constraintLeft_toLeftOf=\"parent\"\r\n        app:layout_constraintRight_toRightOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:navGraph=\"@navigation/mobile_navigation\" />\r\n\r\n\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision 406321b96ff28198a1d13d0e9ac2b5068040d8d6)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1716025199647)
+@@ -11,7 +11,7 @@
+         android:layout_height="wrap_content"
+         android:layout_marginStart="0dp"
+         android:layout_marginEnd="0dp"
+-        android:background="?android:attr/windowBackground"
++        android:background="@color/even_darker_grey"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+Index: app/src/main/res/menu/bottom_nav_menu_store.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<menu xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:android=\"http://schemas.android.com/apk/res/android\">\r\n\r\n    <item\r\n        android:id=\"@+id/navigation_home\"\r\n        android:icon=\"@drawable/ic_home_black_24dp\"\r\n        android:title=\"Home\" />\r\n    <item\r\n        android:id=\"@+id/navigation_post\"\r\n        android:icon=\"@drawable/white_baseline_add_box_24\"\r\n        android:title=\"Post\"\r\n        />\r\n    <item\r\n        android:id=\"@+id/navigation_profile\"\r\n        android:icon=\"@drawable/baseline_store_24\"\r\n        android:title=\"Profile\"\r\n        />\r\n</menu>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/menu/bottom_nav_menu_store.xml b/app/src/main/res/menu/bottom_nav_menu_store.xml
+--- a/app/src/main/res/menu/bottom_nav_menu_store.xml	(revision 406321b96ff28198a1d13d0e9ac2b5068040d8d6)
++++ b/app/src/main/res/menu/bottom_nav_menu_store.xml	(date 1716024920467)
+@@ -2,10 +2,7 @@
+ <menu xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:android="http://schemas.android.com/apk/res/android">
+ 
+-    <item
+-        android:id="@+id/navigation_home"
+-        android:icon="@drawable/ic_home_black_24dp"
+-        android:title="Home" />
++
+     <item
+         android:id="@+id/navigation_post"
+         android:icon="@drawable/white_baseline_add_box_24"
+Index: app/src/main/res/layout/activity_update_store_owner_profile.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:id=\"@+id/main\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"#515252\"\r\n    tools:context=\".StoreOwnerUpdateProfileActivity\"\r\n    tools:layout_editor_absoluteX=\"0dp\"\r\n    tools:layout_editor_absoluteY=\"-13dp\">\r\n\r\n    <View\r\n        android:id=\"@+id/divider\"\r\n        android:layout_width=\"409dp\"\r\n        android:layout_height=\"1dp\"\r\n        android:layout_marginTop=\"84dp\"\r\n        android:background=\"?android:attr/listDivider\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/divider2\" />\r\n\r\n    <View\r\n        android:id=\"@+id/divider2\"\r\n        android:layout_width=\"409dp\"\r\n        android:layout_height=\"1dp\"\r\n        android:layout_marginTop=\"84dp\"\r\n        android:background=\"?android:attr/listDivider\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/store_profile_picture\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/store_desc_label\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"16dp\"\r\n        android:layout_marginTop=\"56dp\"\r\n        android:fontFamily=\"sans-serif-medium\"\r\n        android:text=\"Store Description\"\r\n        android:textColor=\"@color/grey\"\r\n        android:textSize=\"24sp\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/store_name_label\" />\r\n\r\n    <EditText\r\n        android:id=\"@+id/store_desc\"\r\n        android:layout_width=\"151dp\"\r\n        android:layout_height=\"53dp\"\r\n        android:layout_marginStart=\"24dp\"\r\n        android:layout_marginTop=\"36dp\"\r\n        android:hint=\"Enter Description\"\r\n        android:textColor=\"@color/grey\"\r\n        android:textColorHint=\"@color/grey\"\r\n        android:textSize=\"16sp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.0\"\r\n        app:layout_constraintStart_toEndOf=\"@+id/store_desc_label\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/store_name\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/store_address_label\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"16dp\"\r\n        android:layout_marginTop=\"56dp\"\r\n        android:fontFamily=\"sans-serif-medium\"\r\n        android:text=\"Store Address\"\r\n        android:textColor=\"@color/grey\"\r\n        android:textSize=\"24sp\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/store_desc_label\" />\r\n\r\n    <EditText\r\n        android:id=\"@+id/store_address\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"24dp\"\r\n        android:layout_marginTop=\"40dp\"\r\n        android:hint=\"Enter Address\"\r\n        android:minWidth=\"48dp\"\r\n        android:minHeight=\"48dp\"\r\n        android:textColor=\"@color/grey\"\r\n        android:textColorHint=\"@color/grey\"\r\n        android:textSize=\"16sp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.0\"\r\n        app:layout_constraintStart_toEndOf=\"@+id/store_address_label\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/store_desc\" />\r\n\r\n\r\n    <ImageView\r\n        android:id=\"@+id/store_profile_picture\"\r\n        android:layout_width=\"410dp\"\r\n        android:layout_height=\"185dp\"\r\n        android:layout_marginTop=\"4dp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.0\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        tools:srcCompat=\"@tools:sample/avatars\" />\r\n\r\n    <View\r\n        android:id=\"@+id/divider3\"\r\n        android:layout_width=\"409dp\"\r\n        android:layout_height=\"1dp\"\r\n        android:background=\"?android:attr/listDivider\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/store_profile_picture\" />\r\n\r\n    <EditText\r\n        android:id=\"@+id/store_name\"\r\n        android:layout_width=\"148dp\"\r\n        android:layout_height=\"48dp\"\r\n        android:layout_marginStart=\"25dp\"\r\n        android:layout_marginTop=\"16dp\"\r\n        android:hint=\"Enter Name\"\r\n        android:textColor=\"@color/grey\"\r\n        android:textColorHint=\"@color/grey\"\r\n        android:textSize=\"16sp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.0\"\r\n        app:layout_constraintStart_toEndOf=\"@+id/store_name_label\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/store_profile_picture\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/store_name_label\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"16dp\"\r\n        android:layout_marginTop=\"24dp\"\r\n        android:fontFamily=\"sans-serif-medium\"\r\n        android:text=\"Store Name\"\r\n        android:textColor=\"@color/grey\"\r\n        android:textSize=\"24sp\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/store_profile_picture\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/update_button\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"72dp\"\r\n        android:text=\"Update\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/divider4\"\r\n        app:layout_constraintVertical_bias=\"0.0\" />\r\n\r\n    <View\r\n        android:id=\"@+id/divider4\"\r\n        android:layout_width=\"409dp\"\r\n        android:layout_height=\"1dp\"\r\n        android:layout_marginTop=\"84dp\"\r\n        android:background=\"?android:attr/listDivider\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/divider\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/add_image_label\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"Add Image\"\r\n        app:layout_constraintBottom_toTopOf=\"@+id/divider3\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.489\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/store_profile_picture\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/store_profile_picture\"\r\n        app:layout_constraintVertical_bias=\"0.53\" />\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_update_store_owner_profile.xml b/app/src/main/res/layout/activity_update_store_owner_profile.xml
+--- a/app/src/main/res/layout/activity_update_store_owner_profile.xml	(revision 406321b96ff28198a1d13d0e9ac2b5068040d8d6)
++++ b/app/src/main/res/layout/activity_update_store_owner_profile.xml	(date 1716015483328)
+@@ -10,162 +10,133 @@
+     tools:layout_editor_absoluteX="0dp"
+     tools:layout_editor_absoluteY="-13dp">
+ 
+-    <View
+-        android:id="@+id/divider"
+-        android:layout_width="409dp"
+-        android:layout_height="1dp"
+-        android:layout_marginTop="84dp"
+-        android:background="?android:attr/listDivider"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+-
+-    <View
+-        android:id="@+id/divider2"
+-        android:layout_width="409dp"
+-        android:layout_height="1dp"
+-        android:layout_marginTop="84dp"
+-        android:background="?android:attr/listDivider"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/store_profile_picture" />
+-
+     <TextView
+         android:id="@+id/store_desc_label"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginStart="16dp"
+-        android:layout_marginTop="56dp"
++        android:layout_marginTop="20dp"
+         android:fontFamily="sans-serif-medium"
+         android:text="Store Description"
+         android:textColor="@color/grey"
+-        android:textSize="24sp"
++        android:textSize="16sp"
++        app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/store_name_label" />
++        app:layout_constraintTop_toBottomOf="@+id/store_name" />
+ 
+     <EditText
+         android:id="@+id/store_desc"
+-        android:layout_width="151dp"
+-        android:layout_height="53dp"
+-        android:layout_marginStart="24dp"
+-        android:layout_marginTop="36dp"
+-        android:hint="Enter Description"
+-        android:textColor="@color/grey"
+-        android:textColorHint="@color/grey"
++        android:layout_width="313dp"
++        android:layout_height="83dp"
++        android:layout_marginTop="8dp"
++        android:background="@drawable/rectangle_edittext_bg"
++        android:ems="10"
++        android:gravity="start|top"
++        android:hint="Create store description to captivate your customers and showcase the unique value your business offers."
++        android:inputType="textMultiLine"
++        android:maxLength="500"
++        android:paddingStart="10dp"
++        android:paddingTop="5dp"
++        android:scrollbars="vertical"
+         android:textSize="16sp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.0"
+-        app:layout_constraintStart_toEndOf="@+id/store_desc_label"
+-        app:layout_constraintTop_toBottomOf="@+id/store_name" />
++        app:layout_constraintEnd_toEndOf="@+id/store_desc_label"
++        app:layout_constraintStart_toStartOf="@+id/store_desc_label"
++        app:layout_constraintTop_toBottomOf="@+id/store_desc_label" />
++
+ 
+     <TextView
+         android:id="@+id/store_address_label"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginStart="16dp"
+-        android:layout_marginTop="56dp"
++        android:layout_marginTop="20dp"
+         android:fontFamily="sans-serif-medium"
+         android:text="Store Address"
+         android:textColor="@color/grey"
+-        android:textSize="24sp"
++        android:textSize="16sp"
++        app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/store_desc_label" />
++        app:layout_constraintTop_toBottomOf="@+id/store_desc" />
+ 
+     <EditText
+         android:id="@+id/store_address"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="24dp"
+-        android:layout_marginTop="40dp"
+-        android:hint="Enter Address"
+-        android:minWidth="48dp"
+-        android:minHeight="48dp"
+-        android:textColor="@color/grey"
+-        android:textColorHint="@color/grey"
++        android:layout_width="313dp"
++        android:layout_height="83dp"
++        android:layout_marginTop="8dp"
++        android:background="@drawable/rectangle_edittext_bg"
++        android:ems="10"
++        android:gravity="start|top"
++        android:hint="Your store address."
++        android:inputType="textMultiLine"
++        android:maxLength="500"
++        android:paddingStart="10dp"
++        android:paddingTop="5dp"
++        android:scrollbars="vertical"
+         android:textSize="16sp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.0"
+-        app:layout_constraintStart_toEndOf="@+id/store_address_label"
+-        app:layout_constraintTop_toBottomOf="@+id/store_desc" />
++        app:layout_constraintEnd_toEndOf="@+id/store_address_label"
++        app:layout_constraintHorizontal_bias="0.497"
++        app:layout_constraintStart_toStartOf="@+id/store_address_label"
++        app:layout_constraintTop_toBottomOf="@+id/store_address_label" />
+ 
+-
+-    <ImageView
++    <com.google.android.material.imageview.ShapeableImageView
+         android:id="@+id/store_profile_picture"
+-        android:layout_width="410dp"
+-        android:layout_height="185dp"
+-        android:layout_marginTop="4dp"
++        android:layout_width="90dp"
++        android:layout_height="90dp"
++        android:layout_marginTop="48dp"
++        android:padding="1dp"
++        android:src="@drawable/store_profile_default"
++        app:layout_constraintBottom_toTopOf="@+id/store_name_label"
++
+         app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.0"
++        app:layout_constraintHorizontal_bias="0.498"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+-        tools:srcCompat="@tools:sample/avatars" />
+-
+-    <View
+-        android:id="@+id/divider3"
+-        android:layout_width="409dp"
+-        android:layout_height="1dp"
+-        android:background="?android:attr/listDivider"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/store_profile_picture" />
++        app:layout_constraintVertical_bias="0.0"
++        app:shapeAppearanceOverlay="@style/RoundedSquare"
++        app:strokeColor="@color/white"
++        app:strokeWidth="2dp" />
+ 
+     <EditText
+         android:id="@+id/store_name"
+-        android:layout_width="148dp"
+-        android:layout_height="48dp"
+-        android:layout_marginStart="25dp"
+-        android:layout_marginTop="16dp"
+-        android:hint="Enter Name"
+-        android:textColor="@color/grey"
+-        android:textColorHint="@color/grey"
++        android:layout_width="313dp"
++        android:layout_height="83dp"
++        android:layout_marginTop="8dp"
++        android:background="@drawable/rectangle_edittext_bg"
++        android:ems="10"
++        android:gravity="start|top"
++        android:hint="Your store name!"
++        android:inputType="textMultiLine"
++        android:maxLength="500"
++        android:paddingStart="10dp"
++        android:paddingTop="5dp"
++        android:scrollbars="vertical"
+         android:textSize="16sp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.0"
+-        app:layout_constraintStart_toEndOf="@+id/store_name_label"
+-        app:layout_constraintTop_toBottomOf="@+id/store_profile_picture" />
++        app:layout_constraintEnd_toEndOf="@+id/store_name_label"
++        app:layout_constraintStart_toStartOf="@+id/store_name_label"
++        app:layout_constraintTop_toBottomOf="@+id/store_name_label" />
+ 
+     <TextView
+         android:id="@+id/store_name_label"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginStart="16dp"
+-        android:layout_marginTop="24dp"
++        android:layout_marginBottom="552dp"
+         android:fontFamily="sans-serif-medium"
+         android:text="Store Name"
+         android:textColor="@color/grey"
+-        android:textSize="24sp"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/store_profile_picture" />
++        android:textSize="16sp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="@+id/store_profile_picture"
++        app:layout_constraintHorizontal_bias="0.0"
++        app:layout_constraintStart_toStartOf="@+id/store_profile_picture" />
+ 
+     <Button
+         android:id="@+id/update_button"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginTop="72dp"
++        android:layout_marginTop="52dp"
+         android:text="Update"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/divider4"
++        app:layout_constraintTop_toBottomOf="@+id/store_address"
+         app:layout_constraintVertical_bias="0.0" />
+ 
+-    <View
+-        android:id="@+id/divider4"
+-        android:layout_width="409dp"
+-        android:layout_height="1dp"
+-        android:layout_marginTop="84dp"
+-        android:background="?android:attr/listDivider"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/divider" />
+-
+-    <TextView
+-        android:id="@+id/add_image_label"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:text="Add Image"
+-        app:layout_constraintBottom_toTopOf="@+id/divider3"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.489"
+-        app:layout_constraintStart_toStartOf="@+id/store_profile_picture"
+-        app:layout_constraintTop_toTopOf="@+id/store_profile_picture"
+-        app:layout_constraintVertical_bias="0.53" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_create_review.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ScrollView xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"#515252\">\r\n    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n        xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n        xmlns:tools=\"http://schemas.android.com/tools\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:background=\"#515252\">\r\n\r\n        <TextView\r\n            android:id=\"@+id/textView4\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginTop=\"50dp\"\r\n            android:text=\"New Review\"\r\n            android:textColor=\"@color/grey\"\r\n            android:textSize=\"20sp\"\r\n            android:textStyle=\"bold\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/textView8\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginStart=\"30dp\"\r\n            android:layout_marginTop=\"100dp\"\r\n            android:text=\"Location >\"\r\n            android:textColor=\"@color/grey\"\r\n            android:textSize=\"15sp\"\r\n            android:textStyle=\"bold\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/StoreNameTextView\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginTop=\"30dp\"\r\n            android:layout_marginEnd=\"150dp\"\r\n            android:text=\"Store Name\"\r\n            android:textColor=\"@color/grey\"\r\n            android:textStyle=\"bold\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/textView8\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/StoreLocationTextView\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginTop=\"5dp\"\r\n            android:text=\"Store Location\"\r\n            android:textColor=\"@color/grey\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/StoreNameTextView\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/StoreNameTextView\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/textView12\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginStart=\"-50dp\"\r\n            android:layout_marginTop=\"56dp\"\r\n            android:text=\"How was it? Leave a review\"\r\n            android:textColor=\"@color/grey\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/StoreLocationTextView\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/StoreLocationTextView\" />\r\n\r\n        <EditText\r\n            android:id=\"@+id/ReviewDesc\"\r\n            android:layout_width=\"300dp\"\r\n            android:layout_height=\"150dp\"\r\n            android:layout_marginTop=\"160dp\"\r\n            android:background=\"@drawable/rectangle_edittext_bg\"\r\n            android:ems=\"10\"\r\n            android:gravity=\"start|top\"\r\n            android:hint=\"Write your review here...\"\r\n            android:inputType=\"textMultiLine\"\r\n            android:maxLength=\"500\"\r\n            android:paddingStart=\"10dp\"\r\n            android:paddingTop=\"5dp\"\r\n            android:scrollbars=\"vertical\"\r\n            android:textSize=\"16sp\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.504\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/imageButton\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/reviewSubmitBtn\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginTop=\"21dp\"\r\n            android:text=\"Create Review\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/ratingBar\" />\r\n\r\n        <RatingBar\r\n            android:id=\"@+id/ratingBar\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginStart=\"10dp\"\r\n            android:layout_marginTop=\"-20dp\"\r\n            android:numStars=\"5\"\r\n            android:rating=\"0\"\r\n            app:layout_constraintStart_toEndOf=\"@+id/textView13\"\r\n            app:layout_constraintTop_toTopOf=\"@+id/textView13\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/textView13\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginTop=\"50dp\"\r\n            android:text=\"Rating\"\r\n            android:textColor=\"@color/grey\"\r\n            android:textSize=\"16sp\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/ReviewDesc\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/ReviewDesc\" />\r\n\r\n        <ImageView\r\n            android:id=\"@+id/imageView3\"\r\n            android:layout_width=\"50dp\"\r\n            android:layout_height=\"50dp\"\r\n            android:layout_marginStart=\"30dp\"\r\n            android:layout_marginTop=\"28dp\"\r\n            android:layout_marginEnd=\"43dp\"\r\n            app:layout_constraintEnd_toStartOf=\"@+id/StoreNameTextView\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/textView8\"\r\n            />\r\n\r\n        <!-- Button to Select Image -->\r\n        <ImageButton\r\n            android:id=\"@+id/imageButton\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"51dp\"\r\n            android:layout_marginTop=\"30dp\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/textView12\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/textView12\"\r\n            app:srcCompat=\"@android:drawable/ic_menu_camera\" />\r\n\r\n        <!-- Image View to Display Selected Image -->\r\n        <ImageView\r\n            android:id=\"@+id/imageUpload\"\r\n            android:layout_width=\"200dp\"\r\n            android:layout_height=\"200dp\"\r\n            android:layout_marginTop=\"10dp\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toEndOf=\"@+id/imageButton\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/textView12\"\r\n            tools:srcCompat=\"@tools:sample/avatars\" />\r\n\r\n    </androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n</ScrollView>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_create_review.xml b/app/src/main/res/layout/activity_create_review.xml
+--- a/app/src/main/res/layout/activity_create_review.xml	(revision 406321b96ff28198a1d13d0e9ac2b5068040d8d6)
++++ b/app/src/main/res/layout/activity_create_review.xml	(date 1716024516243)
+@@ -98,6 +98,7 @@
+             android:layout_height="wrap_content"
+             android:layout_marginTop="21dp"
+             android:text="Create Review"
++            app:backgroundTint="@color/app_gold_color"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+Index: app/src/main/java/com/example/fyp_ilikethatcoffee/Posts/Post.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.fyp_ilikethatcoffee.Posts;\r\n\r\nimport com.google.firebase.Timestamp;\r\n\r\npublic class Post {\r\n    private String PostInfo;\r\n    private String UserAccountId;\r\n    private Timestamp DateCreated;\r\n    //private String storeName;\r\n    private String Image;\r\n\r\n    public Post(){\r\n\r\n    }\r\n    public Post(String postInfo, String userAccountId, Timestamp dateCreated, String Image){\r\n        this.PostInfo = postInfo;\r\n        this.UserAccountId = userAccountId;\r\n        this.DateCreated = dateCreated;\r\n        this.Image = Image;\r\n    }\r\n\r\n    public String getUserAccountId(){\r\n        return UserAccountId;\r\n    }\r\n\r\n    /*\r\n    public String getProfileUrl() {\r\n        return profileUrl;\r\n    }\r\n\r\n     */\r\n\r\n    public String getPostInfo() {\r\n        return PostInfo;\r\n    }\r\n\r\n    public Timestamp getDateCreated() {\r\n        return DateCreated;\r\n    }\r\n\r\n    /*\r\n    public String getStoreName(){return storeName;}\r\n\r\n\r\n     */\r\n    public String getImage() {\r\n        return Image;\r\n    }\r\n\r\n    public void setPostInfo(String postInfo) {\r\n        this.PostInfo = postInfo;\r\n    }\r\n\r\n    public void setDateCreated(Timestamp dateCreated) {\r\n        this.DateCreated = dateCreated;\r\n    }\r\n\r\n    /*\r\n    public void setProfileUrl(String profileUrl) {\r\n        this.profileUrl = profileUrl;\r\n    }\r\n\r\n     */\r\n\r\n    public void setUserAccountId(String userAccountId) {\r\n        this.UserAccountId = userAccountId;\r\n    }\r\n\r\n    /*\r\n    public void setStoreName(String storeName) {\r\n        this.storeName = storeName;\r\n    }\r\n\r\n     */\r\n\r\n    public void setImage(String image) {\r\n        this.Image = image;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/fyp_ilikethatcoffee/Posts/Post.java b/app/src/main/java/com/example/fyp_ilikethatcoffee/Posts/Post.java
+--- a/app/src/main/java/com/example/fyp_ilikethatcoffee/Posts/Post.java	(revision 406321b96ff28198a1d13d0e9ac2b5068040d8d6)
++++ b/app/src/main/java/com/example/fyp_ilikethatcoffee/Posts/Post.java	(date 1716022875172)
+@@ -7,6 +7,7 @@
+     private String UserAccountId;
+     private Timestamp DateCreated;
+     //private String storeName;
++    private String PostId;
+     private String Image;
+ 
+     public Post(){
+@@ -47,6 +48,7 @@
+         return Image;
+     }
+ 
++
+     public void setPostInfo(String postInfo) {
+         this.PostInfo = postInfo;
+     }
+@@ -76,4 +78,6 @@
+     public void setImage(String image) {
+         this.Image = image;
+     }
++
++
+ }
+Index: app/src/main/java/com/example/fyp_ilikethatcoffee/Posts/PostAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.fyp_ilikethatcoffee.Posts;\r\n\r\nimport android.util.Log;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.ImageView;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.cardview.widget.CardView;\r\nimport androidx.fragment.app.FragmentActivity;\r\nimport androidx.fragment.app.FragmentManager;\r\nimport androidx.recyclerview.widget.RecyclerView;\r\n\r\nimport com.example.fyp_ilikethatcoffee.Dialog.ConsumerPostDialogueFragment;\r\nimport com.example.fyp_ilikethatcoffee.Dialog.StoreOwnerPostDialogueFragment;\r\nimport com.example.fyp_ilikethatcoffee.R;\r\nimport com.bumptech.glide.Glide;\r\nimport com.example.fyp_ilikethatcoffee.Store;\r\nimport com.firebase.ui.firestore.FirestoreRecyclerAdapter;\r\nimport com.firebase.ui.firestore.FirestoreRecyclerOptions;\r\nimport com.google.firebase.Timestamp;\r\nimport com.google.firebase.firestore.FirebaseFirestore;\r\n\r\nimport java.text.SimpleDateFormat;\r\nimport java.util.Date;\r\n\r\npublic class PostAdapter extends FirestoreRecyclerAdapter<Post, PostAdapter.MyViewHolder> {\r\n    private String storeEmail, currentUserEmail;\r\n\r\n    public PostAdapter(@NonNull FirestoreRecyclerOptions<Post> options, String currentUserEmail) {\r\n\r\n        super(options);\r\n        this.currentUserEmail = currentUserEmail;\r\n    }\r\n\r\n    public static class StoreViewHolder extends RecyclerView.ViewHolder {\r\n        TextView storeNameTextView;\r\n\r\n\r\n        public StoreViewHolder(@NonNull View itemView) {\r\n            super(itemView);\r\n            storeNameTextView = itemView.findViewById(R.id.store_display_name); // Replace with the actual ID\r\n        }\r\n    }\r\n\r\n\r\n    @Override\r\n    protected void onBindViewHolder(@NonNull MyViewHolder viewHolder, int i, @NonNull Post post) {\r\n        //viewHolder.storeDisplayName.setText(post.getUserAccountId());\r\n        viewHolder.storePostCaption.setText(post.getPostInfo());\r\n        String postCaption = post.getPostInfo();\r\n        int maxLength = 100; // Maximum length of post caption to display initially\r\n        if (postCaption.length() > maxLength) {\r\n            viewHolder.readMoreTextView.setVisibility(View.VISIBLE);\r\n            viewHolder.storePostCaption.setText(postCaption.substring(0, maxLength) + \"\");\r\n            viewHolder.readMoreTextView.setOnClickListener(new View.OnClickListener() {\r\n                @Override\r\n                public void onClick(View v) {\r\n                    viewHolder.storePostCaption.setText(postCaption);\r\n                    viewHolder.readMoreTextView.setVisibility(View.GONE);\r\n                }\r\n            });\r\n        } else {\r\n            viewHolder.storePostCaption.setText(postCaption);\r\n            viewHolder.readMoreTextView.setVisibility(View.GONE);\r\n        }\r\n        // Get the DateCreated timestamp from the Post object\r\n        Timestamp timestamp = post.getDateCreated();\r\n        // Convert the timestamp to a Date object\r\n        Date date = timestamp.toDate();\r\n        // Format the date as a string\r\n        SimpleDateFormat dateFormat = new SimpleDateFormat(\"MMMM dd, yyyy 'at' hh:mm:ss a 'UTC'Z\");\r\n        String dateString = dateFormat.format(date);\r\n        // Set the formatted date string to the postDate TextView\r\n        viewHolder.postDate.setText(dateString);\r\n        // Load post picture using Glide or any other method\r\n        Glide.with(viewHolder.postPicture.getContext()).load(post.getImage()).into(viewHolder.postPicture);\r\n\r\n\r\n        FirebaseFirestore.getInstance().collection(\"Store\")\r\n                .document(post.getUserAccountId())\r\n                .get()\r\n                .addOnSuccessListener(documentSnapshot -> {\r\n                    if (documentSnapshot.exists()) {\r\n                        Store store = documentSnapshot.toObject(Store.class);\r\n                        if (store != null) {\r\n                            storeEmail = store.getUserAccountId();\r\n                            Log.d(\"PostAdapter\", \"storeEmail: \" + storeEmail);\r\n                            viewHolder.storeDisplayName.setText(store.getStoreName());\r\n                            // Load store profile picture using Glide or any other method\r\n                            Glide.with(viewHolder.profilePic.getContext()).load(store.getImageUrl()).into(viewHolder.profilePic);\r\n\r\n                            // Fetch corresponding UserAccount document\r\n                            FirebaseFirestore.getInstance().collection(\"UserAccount\")\r\n                                    .document(currentUserEmail)\r\n                                    .get()\r\n                                    .addOnSuccessListener(userAccountDocument -> {\r\n                                        if (userAccountDocument.exists()) {\r\n                                            String userType = userAccountDocument.getString(\"UserType\");\r\n                                            if (userType != null) {\r\n                                                if (userType.equals(\"StoreOwner\")) {\r\n                                                    // SetOnClick for Meatball icon for posts\r\n                                                    viewHolder.meatballMoreIcon.setOnClickListener(new View.OnClickListener() {\r\n                                                        @Override\r\n                                                        public void onClick(View v) {\r\n                                                            // Create an instance of StoreOwnerPostDialogueFragment\r\n                                                            StoreOwnerPostDialogueFragment dialogFragment = new StoreOwnerPostDialogueFragment();\r\n                                                            // Show the dialog fragment\r\n                                                            FragmentManager fragmentManager = ((FragmentActivity) viewHolder.itemView.getContext()).getSupportFragmentManager();\r\n                                                            dialogFragment.show(fragmentManager, \"StoreOwnerPostDialogFragment\");\r\n                                                        }\r\n                                                    });\r\n                                                } else if (userType.equals(\"Consumer\")) {\r\n                                                    // SetOnClick for Meatball icon for posts\r\n                                                    viewHolder.meatballMoreIcon.setOnClickListener(new View.OnClickListener() {\r\n                                                        @Override\r\n                                                        public void onClick(View v) {\r\n                                                            // Create an instance of ConsumerPostDialogueFragment\r\n                                                            ConsumerPostDialogueFragment dialogFragment = new ConsumerPostDialogueFragment();\r\n                                                            // Show the dialog fragment\r\n                                                            FragmentManager fragmentManager = ((FragmentActivity) viewHolder.itemView.getContext()).getSupportFragmentManager();\r\n                                                            dialogFragment.show(fragmentManager, \"ConsumerPostDialogFragment\");\r\n                                                        }\r\n                                                    });\r\n                                                }\r\n                                            }\r\n                                        }\r\n                                    })\r\n                                    .addOnFailureListener(e -> {\r\n                                        // Handle failure to fetch UserAccount document\r\n                                        Log.e(\"PostAdapter\", \"Failed to fetch UserAccount document\", e);\r\n                                    });\r\n                        }\r\n                    }\r\n                })\r\n                .addOnFailureListener(e -> {\r\n                    // Handle failure to retrieve store information\r\n                });\r\n\r\n\r\n\r\n    }\r\n\r\n    public static class MyViewHolder extends RecyclerView.ViewHolder {\r\n        public CardView mCardView;\r\n        public TextView storeDisplayName;\r\n        public TextView storePostCaption;\r\n        public TextView postDate;\r\n        public ImageView profilePic;\r\n        public ImageView postPicture;\r\n        public ImageView meatballMoreIcon;\r\n        public TextView readMoreTextView; // Read More TextView\r\n\r\n\r\n        public MyViewHolder(View v) {\r\n            super(v);\r\n            mCardView = v.findViewById(R.id.card_view_store);\r\n            storeDisplayName = v.findViewById(R.id.store_display_name);\r\n            storePostCaption = v.findViewById(R.id.post_caption_text);\r\n            postDate = v.findViewById(R.id.date_text);\r\n            postPicture = v.findViewById(R.id.image_post);\r\n            profilePic = v.findViewById(R.id.store_profile_picture_p);\r\n            readMoreTextView = v.findViewById(R.id.read_more_text);\r\n            meatballMoreIcon = v.findViewById(R.id.meatball_icon_more);\r\n\r\n        }\r\n\r\n\r\n    }\r\n\r\n\r\n    // Create new views (invoked by the layout manager)\r\n    @NonNull\r\n    @Override\r\n    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {\r\n        LayoutInflater inflater = LayoutInflater.from(parent.getContext());\r\n        View view = inflater.inflate(R.layout.post_item, parent, false);\r\n        return new MyViewHolder(view);\r\n\r\n    }\r\n\r\n\r\n}\r\n/*\r\npublic class ChatAdapter extends FirestoreRecyclerAdapter<Message, RecyclerView.ViewHolder> {\r\n\r\n    private static final int VIEW_TYPE_SENT = 1;\r\n    private static final int VIEW_TYPE_RECEIVED = 2;\r\n    private String currentUserId; // Added for storing current user ID\r\n\r\n    public ChatAdapter(@NonNull FirestoreRecyclerOptions<Message> options, String currentUserId) {\r\n        super(options);\r\n        this.currentUserId = currentUserId;\r\n    }\r\n\r\n    @Override\r\n    public int getItemViewType(int position) {\r\n        // Determine the view type based on the sender of the message\r\n        Message message = getItem(position);\r\n        if (message != null && message.getSenderId() != null && message.getSenderId().equals(currentUserId)) {\r\n            return VIEW_TYPE_SENT;\r\n        } else {\r\n            return VIEW_TYPE_RECEIVED;\r\n        }\r\n    }\r\n\r\n\r\n    @NonNull\r\n    @Override\r\n    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {\r\n        LayoutInflater inflater = LayoutInflater.from(parent.getContext());\r\n        View view;\r\n        RecyclerView.ViewHolder viewHolder;\r\n\r\n        // Inflate the appropriate layout based on the view type\r\n        if (viewType == VIEW_TYPE_SENT) {\r\n            view = inflater.inflate(R.layout.item_chat_sent, parent, false);\r\n            viewHolder = new SentMessageViewHolder(view);\r\n        } else {\r\n            view = inflater.inflate(R.layout.item_chat_received, parent, false);\r\n            viewHolder = new ReceivedMessageViewHolder(view);\r\n        }\r\n\r\n        return viewHolder;\r\n    }\r\n\r\n    @Override\r\n    protected void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position, @NonNull Message message) {\r\n        // Bind the data to the views based on the view type\r\n        if (holder instanceof SentMessageViewHolder) {\r\n            ((SentMessageViewHolder) holder).bind(message);\r\n        } else if (holder instanceof ReceivedMessageViewHolder) {\r\n            ((ReceivedMessageViewHolder) holder).bind(message);\r\n        }\r\n    }\r\n\r\n    // Define ViewHolder classes for sent and received messages\r\n    private static class SentMessageViewHolder extends RecyclerView.ViewHolder {\r\n        ImageView imageViewProfile;\r\n        TextView textSenderName;\r\n        TextView textMessageContent;\r\n        TextView textMessageTimestamp;\r\n\r\n        SentMessageViewHolder(View itemView) {\r\n            super(itemView);\r\n            imageViewProfile = itemView.findViewById(R.id.image_profile_sent);\r\n            textSenderName = itemView.findViewById(R.id.text_sender_name);\r\n            textMessageContent = itemView.findViewById(R.id.text_message_content_sent);\r\n            textMessageTimestamp = itemView.findViewById(R.id.text_message_timestamp_sent);\r\n        }\r\n\r\n        void bind(Message message) {\r\n            Log.d(\"SentMessageViewHolder\", \"Message Content: \" + message.getMessageContent());\r\n            // Bind data to views here\r\n            // For example:\r\n            textSenderName.setText(message.getSenderName());\r\n            textMessageContent.setText(message.getMessageContent());\r\n            textMessageTimestamp.setText(message.getTimestamp());\r\n            // You can also bind profile picture or other data if needed\r\n        }\r\n\r\n    }\r\n\r\n\r\n    private static class ReceivedMessageViewHolder extends RecyclerView.ViewHolder {\r\n        ImageView imageViewProfile;\r\n        TextView textSenderName;\r\n        TextView textMessageContent;\r\n        TextView textMessageTimestamp;\r\n\r\n        ReceivedMessageViewHolder(View itemView) {\r\n            super(itemView);\r\n            imageViewProfile = itemView.findViewById(R.id.image_profile_received);\r\n            textSenderName = itemView.findViewById(R.id.text_sender_name);\r\n            textMessageContent = itemView.findViewById(R.id.text_message_content_received);\r\n            textMessageTimestamp = itemView.findViewById(R.id.text_message_timestamp_received);\r\n        }\r\n\r\n        void bind(Message message) {\r\n            // Bind data to views here\r\n            // For example:\r\n            textSenderName.setText(message.getSenderName());\r\n            textMessageContent.setText(message.getMessageContent());\r\n            textMessageTimestamp.setText(message.getTimestamp());\r\n        }\r\n    }\r\n\r\n\r\n}\r\n\r\n */\r\n\r\n/*\r\npublic class PostAdapter extends FirestoreRecyclerAdapter<Post, PostAdapter.MyViewHolder> {\r\n\r\n\r\n    public PostAdapter(@NonNull FirestoreRecyclerOptions<Post> options) {\r\n        super(options);\r\n    }\r\n\r\n    public static class StoreViewHolder extends RecyclerView.ViewHolder {\r\n        TextView storeNameTextView;\r\n\r\n\r\n        public StoreViewHolder(@NonNull View itemView) {\r\n            super(itemView);\r\n            storeNameTextView = itemView.findViewById(R.id.store_display_name); // Replace with the actual ID\r\n        }\r\n    }\r\n\r\n\r\n    @Override\r\n    protected void onBindViewHolder(@NonNull MyViewHolder viewHolder, int i, @NonNull Post post) {\r\n        viewHolder.storeDisplayName.setText(post.getUserAccountId());\r\n        viewHolder.storePostCaption.setText(post.getPostInfo());\r\n\r\n        // Get the DateCreated timestamp from the Post object\r\n        Timestamp timestamp = post.getDateCreated();\r\n        // Convert the timestamp to a Date object\r\n        Date date = timestamp.toDate();\r\n        // Format the date as a string\r\n        SimpleDateFormat dateFormat = new SimpleDateFormat(\"MMMM dd, yyyy 'at' hh:mm:ss a 'UTC'Z\");\r\n        String dateString = dateFormat.format(date);\r\n        // Set the formatted date string to the postDate TextView\r\n        viewHolder.postDate.setText(dateString);\r\n\r\n        //Glide.with(viewHolder.profilePic.getContext()).load(post.getProfileUrl()).into(viewHolder.profilePic);\r\n        Glide.with(viewHolder.postPicture.getContext()).load(post.getImage()).into(viewHolder.postPicture);\r\n    }\r\n\r\n    public static class MyViewHolder extends RecyclerView.ViewHolder {\r\n        public CardView mCardView;\r\n        public TextView storeDisplayName;\r\n        public TextView storePostCaption;\r\n        public TextView postDate;\r\n        //public ImageView profilePic;\r\n        public ImageView postPicture;\r\n\r\n        public MyViewHolder(View v) {\r\n            super(v);\r\n            mCardView = v.findViewById(R.id.card_view_store);\r\n            storeDisplayName = v.findViewById(R.id.store_display_name);\r\n            storePostCaption = v.findViewById(R.id.post_caption_text);\r\n            postDate = v.findViewById(R.id.date_text);\r\n            //profilePic = (ImageView) v.findViewById(R.id.store_profile_picture);\r\n            postPicture = v.findViewById(R.id.image_post);\r\n\r\n\r\n        }\r\n    }\r\n\r\n\r\n\r\n    // Create new views (invoked by the layout manager)\r\n    @NonNull\r\n    @Override\r\n    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {\r\n        LayoutInflater inflater = LayoutInflater.from(parent.getContext());\r\n        View view = inflater.inflate(R.layout.post_item, parent, false);\r\n        return new MyViewHolder(view);\r\n\r\n    }\r\n\r\n\r\n\r\n\r\n\r\n}\r\n\r\n */
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/fyp_ilikethatcoffee/Posts/PostAdapter.java b/app/src/main/java/com/example/fyp_ilikethatcoffee/Posts/PostAdapter.java
+--- a/app/src/main/java/com/example/fyp_ilikethatcoffee/Posts/PostAdapter.java	(revision 406321b96ff28198a1d13d0e9ac2b5068040d8d6)
++++ b/app/src/main/java/com/example/fyp_ilikethatcoffee/Posts/PostAdapter.java	(date 1716023674844)
+@@ -30,55 +30,66 @@
+     private String storeEmail, currentUserEmail;
+ 
+     public PostAdapter(@NonNull FirestoreRecyclerOptions<Post> options, String currentUserEmail) {
+-
+         super(options);
+         this.currentUserEmail = currentUserEmail;
+     }
+ 
+-    public static class StoreViewHolder extends RecyclerView.ViewHolder {
+-        TextView storeNameTextView;
+-
++    public static class MyViewHolder extends RecyclerView.ViewHolder {
++        public CardView mCardView;
++        public TextView storeDisplayName;
++        public TextView storePostCaption;
++        public TextView postDate;
++        public ImageView profilePic;
++        public ImageView postPicture;
++        public ImageView meatballMoreIcon;
++        public TextView readMoreTextView;
+ 
+-        public StoreViewHolder(@NonNull View itemView) {
+-            super(itemView);
+-            storeNameTextView = itemView.findViewById(R.id.store_display_name); // Replace with the actual ID
++        public MyViewHolder(View v) {
++            super(v);
++            mCardView = v.findViewById(R.id.card_view_store);
++            storeDisplayName = v.findViewById(R.id.store_display_name);
++            storePostCaption = v.findViewById(R.id.post_caption_text);
++            postDate = v.findViewById(R.id.date_text);
++            postPicture = v.findViewById(R.id.image_post);
++            profilePic = v.findViewById(R.id.store_profile_picture_p);
++            readMoreTextView = v.findViewById(R.id.read_more_text);
++            meatballMoreIcon = v.findViewById(R.id.meatball_icon_more);
+         }
+     }
+-
+ 
+     @Override
+-    protected void onBindViewHolder(@NonNull MyViewHolder viewHolder, int i, @NonNull Post post) {
+-        //viewHolder.storeDisplayName.setText(post.getUserAccountId());
++    protected void onBindViewHolder(@NonNull MyViewHolder viewHolder, int position, @NonNull Post post) {
++        // Set the post caption and handle "read more" functionality
+         viewHolder.storePostCaption.setText(post.getPostInfo());
+         String postCaption = post.getPostInfo();
+-        int maxLength = 100; // Maximum length of post caption to display initially
++        int maxLength = 100;
+         if (postCaption.length() > maxLength) {
+             viewHolder.readMoreTextView.setVisibility(View.VISIBLE);
+-            viewHolder.storePostCaption.setText(postCaption.substring(0, maxLength) + "");
+-            viewHolder.readMoreTextView.setOnClickListener(new View.OnClickListener() {
+-                @Override
+-                public void onClick(View v) {
+-                    viewHolder.storePostCaption.setText(postCaption);
+-                    viewHolder.readMoreTextView.setVisibility(View.GONE);
+-                }
++            viewHolder.storePostCaption.setText(postCaption.substring(0, maxLength) + "...");
++            viewHolder.readMoreTextView.setOnClickListener(v -> {
++                viewHolder.storePostCaption.setText(postCaption);
++                viewHolder.readMoreTextView.setVisibility(View.GONE);
+             });
+         } else {
+             viewHolder.storePostCaption.setText(postCaption);
+             viewHolder.readMoreTextView.setVisibility(View.GONE);
+         }
+-        // Get the DateCreated timestamp from the Post object
++
++        // Set the post date
+         Timestamp timestamp = post.getDateCreated();
+-        // Convert the timestamp to a Date object
+         Date date = timestamp.toDate();
+-        // Format the date as a string
+         SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM dd, yyyy 'at' hh:mm:ss a 'UTC'Z");
+         String dateString = dateFormat.format(date);
+-        // Set the formatted date string to the postDate TextView
+         viewHolder.postDate.setText(dateString);
+-        // Load post picture using Glide or any other method
++
++        // Load post picture using Glide
+         Glide.with(viewHolder.postPicture.getContext()).load(post.getImage()).into(viewHolder.postPicture);
+ 
++        // Get the document ID for the current post
++        String documentId = getSnapshots().getSnapshot(position).getId();
++        Log.d("PostAdapter", "Current PostId: " + documentId);
+ 
++        // Fetch Store information
+         FirebaseFirestore.getInstance().collection("Store")
+                 .document(post.getUserAccountId())
+                 .get()
+@@ -89,7 +100,7 @@
+                             storeEmail = store.getUserAccountId();
+                             Log.d("PostAdapter", "storeEmail: " + storeEmail);
+                             viewHolder.storeDisplayName.setText(store.getStoreName());
+-                            // Load store profile picture using Glide or any other method
++                            // Load store profile picture using Glide
+                             Glide.with(viewHolder.profilePic.getContext()).load(store.getImageUrl()).into(viewHolder.profilePic);
+ 
+                             // Fetch corresponding UserAccount document
+@@ -101,88 +112,42 @@
+                                             String userType = userAccountDocument.getString("UserType");
+                                             if (userType != null) {
+                                                 if (userType.equals("StoreOwner")) {
+-                                                    // SetOnClick for Meatball icon for posts
+-                                                    viewHolder.meatballMoreIcon.setOnClickListener(new View.OnClickListener() {
+-                                                        @Override
+-                                                        public void onClick(View v) {
+-                                                            // Create an instance of StoreOwnerPostDialogueFragment
+-                                                            StoreOwnerPostDialogueFragment dialogFragment = new StoreOwnerPostDialogueFragment();
+-                                                            // Show the dialog fragment
+-                                                            FragmentManager fragmentManager = ((FragmentActivity) viewHolder.itemView.getContext()).getSupportFragmentManager();
+-                                                            dialogFragment.show(fragmentManager, "StoreOwnerPostDialogFragment");
+-                                                        }
++                                                    viewHolder.meatballMoreIcon.setOnClickListener(v -> {
++                                                        StoreOwnerPostDialogueFragment dialogFragment =
++                                                                StoreOwnerPostDialogueFragment.newInstance(store.getUserAccountId(), post.getPostInfo(), post.getImage(), documentId);
++                                                        FragmentManager fragmentManager = ((FragmentActivity) viewHolder.itemView.getContext()).getSupportFragmentManager();
++                                                        dialogFragment.show(fragmentManager, "StorePostDialogue");
+                                                     });
+                                                 } else if (userType.equals("Consumer")) {
+-                                                    // SetOnClick for Meatball icon for posts
+-                                                    viewHolder.meatballMoreIcon.setOnClickListener(new View.OnClickListener() {
+-                                                        @Override
+-                                                        public void onClick(View v) {
+-                                                            // Create an instance of ConsumerPostDialogueFragment
+-                                                            ConsumerPostDialogueFragment dialogFragment = new ConsumerPostDialogueFragment();
+-                                                            // Show the dialog fragment
+-                                                            FragmentManager fragmentManager = ((FragmentActivity) viewHolder.itemView.getContext()).getSupportFragmentManager();
+-                                                            dialogFragment.show(fragmentManager, "ConsumerPostDialogFragment");
+-                                                        }
++                                                    viewHolder.meatballMoreIcon.setOnClickListener(v -> {
++                                                        ConsumerPostDialogueFragment dialogFragment = new ConsumerPostDialogueFragment();
++                                                        FragmentManager fragmentManager = ((FragmentActivity) viewHolder.itemView.getContext()).getSupportFragmentManager();
++                                                        dialogFragment.show(fragmentManager, "ConsumerPostDialogFragment");
+                                                     });
+                                                 }
+                                             }
+                                         }
+                                     })
+                                     .addOnFailureListener(e -> {
+-                                        // Handle failure to fetch UserAccount document
+                                         Log.e("PostAdapter", "Failed to fetch UserAccount document", e);
+                                     });
+                         }
+                     }
+                 })
+                 .addOnFailureListener(e -> {
+-                    // Handle failure to retrieve store information
++                    Log.e("PostAdapter", "Failed to fetch store information", e);
+                 });
+-
+-
+-
+-    }
+-
+-    public static class MyViewHolder extends RecyclerView.ViewHolder {
+-        public CardView mCardView;
+-        public TextView storeDisplayName;
+-        public TextView storePostCaption;
+-        public TextView postDate;
+-        public ImageView profilePic;
+-        public ImageView postPicture;
+-        public ImageView meatballMoreIcon;
+-        public TextView readMoreTextView; // Read More TextView
+-
+-
+-        public MyViewHolder(View v) {
+-            super(v);
+-            mCardView = v.findViewById(R.id.card_view_store);
+-            storeDisplayName = v.findViewById(R.id.store_display_name);
+-            storePostCaption = v.findViewById(R.id.post_caption_text);
+-            postDate = v.findViewById(R.id.date_text);
+-            postPicture = v.findViewById(R.id.image_post);
+-            profilePic = v.findViewById(R.id.store_profile_picture_p);
+-            readMoreTextView = v.findViewById(R.id.read_more_text);
+-            meatballMoreIcon = v.findViewById(R.id.meatball_icon_more);
+-
+-        }
+-
+-
+     }
+ 
+-
+-    // Create new views (invoked by the layout manager)
+     @NonNull
+     @Override
+     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+         View view = inflater.inflate(R.layout.post_item, parent, false);
+         return new MyViewHolder(view);
+-
+     }
+-
+-
+ }
++
+ /*
+ public class ChatAdapter extends FirestoreRecyclerAdapter<Message, RecyclerView.ViewHolder> {
+ 
+Index: app/src/main/java/com/example/fyp_ilikethatcoffee/Dialog/EditStorePostActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/fyp_ilikethatcoffee/Dialog/EditStorePostActivity.java b/app/src/main/java/com/example/fyp_ilikethatcoffee/Dialog/EditStorePostActivity.java
+new file mode 100644
+--- /dev/null	(date 1716023386153)
++++ b/app/src/main/java/com/example/fyp_ilikethatcoffee/Dialog/EditStorePostActivity.java	(date 1716023386153)
+@@ -0,0 +1,301 @@
++package com.example.fyp_ilikethatcoffee.Dialog;
++
++import android.Manifest;
++import android.app.AlertDialog;
++import android.content.Intent;
++import android.content.pm.PackageManager;
++import android.net.Uri;
++import android.os.Build;
++import android.os.Bundle;
++import android.os.Environment;
++import android.provider.MediaStore;
++import android.util.Log;
++import android.view.View;
++import android.widget.Button;
++import android.widget.EditText;
++import android.widget.ImageView;
++import android.widget.TextView;
++import android.widget.Toast;
++
++import androidx.activity.EdgeToEdge;
++import androidx.annotation.NonNull;
++import androidx.annotation.Nullable;
++import androidx.appcompat.app.AppCompatActivity;
++import androidx.core.app.ActivityCompat;
++import androidx.core.content.ContextCompat;
++import androidx.core.content.FileProvider;
++import androidx.core.graphics.Insets;
++import androidx.core.view.ViewCompat;
++import androidx.core.view.WindowInsetsCompat;
++
++import com.example.fyp_ilikethatcoffee.FullStoreProfileActivity;
++import com.example.fyp_ilikethatcoffee.Menu.CategoryFragment;
++import com.example.fyp_ilikethatcoffee.Posts.PostFragment;
++import com.example.fyp_ilikethatcoffee.R;
++import com.example.fyp_ilikethatcoffee.StoreOwnerProfileActivity;
++import com.example.fyp_ilikethatcoffee.StoreOwnerUpdateProfileActivity;
++import com.example.fyp_ilikethatcoffee.StoreReviewFragment;
++import com.google.firebase.auth.FirebaseAuth;
++import com.google.firebase.firestore.DocumentReference;
++import com.google.firebase.firestore.FirebaseFirestore;
++import com.google.firebase.storage.FirebaseStorage;
++import com.google.firebase.storage.StorageReference;
++import com.squareup.picasso.Picasso;
++
++import java.io.File;
++import java.io.IOException;
++import java.text.SimpleDateFormat;
++import java.util.Date;
++import java.util.HashMap;
++import java.util.Locale;
++import java.util.Map;
++
++public class EditStorePostActivity extends AppCompatActivity {
++
++    private static final int PICK_IMAGE_REQUEST = 113;
++    private static final int PERMISSION_REQUEST_CODE = 114;
++    private Uri imageUri;
++    private static final int REQUEST_IMAGE_CAPTURE = 3;
++    private String storeEmail,postCaption, postImage;
++    private String postId;
++    private EditText postCaptionEdit;
++    private TextView storeName;
++    private ImageView postPicture, storeProfilePic;
++    private Button updateBtn;
++    private String currentPhotoPath;
++    private FirebaseStorage storage;
++    private StorageReference mImageRef;
++    private FirebaseFirestore db; // Declare Firestore instance
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_edit_store_post);
++        // Check for permissions
++        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
++            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_IMAGES)
++                    != PackageManager.PERMISSION_GRANTED) {
++                ActivityCompat.requestPermissions(this,
++                        new String[]{Manifest.permission.READ_MEDIA_IMAGES}, PERMISSION_REQUEST_CODE);
++            }
++        } else {
++            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
++                    != PackageManager.PERMISSION_GRANTED) {
++                ActivityCompat.requestPermissions(this,
++                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
++            }
++        }
++        db = FirebaseFirestore.getInstance(); // Initialize Firestore instance
++
++        postCaptionEdit = findViewById(R.id.post_caption_text);
++        storeName = findViewById(R.id.store_display_name);
++        postPicture = findViewById(R.id.image_post);
++        storeProfilePic = findViewById(R.id.store_profile_picture_p);
++        updateBtn = findViewById(R.id.update_post);
++        mImageRef = FirebaseStorage.getInstance().getReference().child("Store Post Image");
++
++        if (getIntent() != null) {
++            storeEmail = getIntent().getStringExtra("storeEmail");
++            postId = getIntent().getStringExtra("postId"); // Use a default value of -1
++            postCaption = getIntent().getStringExtra("postCaption");
++            postImage = getIntent().getStringExtra("postImage");
++        }
++        // Check if postId is valid
++        if (postId == null) {
++            // Handle the case where postId is invalid
++            Log.e("EditStorePostActivity", "Invalid postId");
++            finish(); // Optionally, you can close the activity or handle it appropriately
++        }
++
++        Log.d("EditStorePostActivity", "Current postId Retrieved: " + postId);
++        Log.d("EditStorePostActivity", "Current storeEmail Retrieved: " + storeEmail);
++        // Initialize your views and set the data accordingly
++        fetchStoreInformation();
++        fetchPostInformation();
++
++        postPicture.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                selectImage();
++            }
++        });
++
++        updateBtn.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                updatePost();
++            }
++        });
++
++
++    }
++
++    private void selectImage() {
++        final CharSequence[] options = {"Take Photo", "Choose from Gallery", "Cancel"};
++        AlertDialog.Builder builder = new AlertDialog.Builder(this);
++        builder.setTitle("Add Photo!");
++        builder.setItems(options, (dialog, item) -> {
++            if ("Take Photo".equals(options[item])) {
++                dispatchTakePictureIntent();
++            } else if ("Choose from Gallery".equals(options[item])) {
++                openGallery();
++            } else {
++                dialog.dismiss();
++            }
++        });
++        builder.show();
++    }
++
++
++
++    private File createImageFile() throws IOException {
++        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
++        String imageFileName = "JPEG_" + timeStamp + "_";
++        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
++        File image = File.createTempFile(
++                imageFileName,
++                ".jpg",
++                storageDir
++        );
++        currentPhotoPath = image.getAbsolutePath();
++        return image;
++    }
++
++    private void dispatchTakePictureIntent() {
++        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
++        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
++            File photoFile = null;
++            try {
++                photoFile = createImageFile();
++            } catch (IOException ex) {
++                Toast.makeText(this, "Error occurred while creating the file", Toast.LENGTH_SHORT).show();
++                return;
++            }
++            if (photoFile != null) {
++                Uri photoURI = FileProvider.getUriForFile(this,
++                        "com.example.fyp_ilikethatcoffee.fileprovider",  // Make sure this matches the authority in AndroidManifest.xml
++                        photoFile);
++                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
++                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
++            }
++        }
++    }
++
++    private void openGallery() {
++        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
++        intent.setType("image/*");
++        startActivityForResult(intent, PICK_IMAGE_REQUEST);
++    }
++
++    @Override
++    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
++        super.onActivityResult(requestCode, resultCode, data);
++        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
++            imageUri = data.getData();
++            postPicture.setImageURI(imageUri);
++        } else if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
++            imageUri = Uri.fromFile(new File(currentPhotoPath));
++            postPicture.setImageURI(imageUri);
++        }
++    }
++
++    public void fetchStoreInformation(){
++        db.collection("Store").document(storeEmail)
++                .get().addOnCompleteListener(task -> {
++                    if (task.isSuccessful() && task.getResult() != null) {
++                        String storeN = task.getResult().getString("StoreName");
++                        String imageUrl = task.getResult().getString("ImageUrl");
++
++                        storeName.setText(storeN);
++                        Picasso.get().load(imageUrl).into(storeProfilePic);
++                        Log.d("StoreOwnerProfileActivity", "Current StoreName Retrieved: " + storeName);
++
++
++                    }
++
++
++                });
++    }
++
++    public void fetchPostInformation(){
++        db.collection("Post").document(postId)
++                .get().addOnCompleteListener(task -> {
++                    if (task.isSuccessful() && task.getResult() != null) {
++                        String postC = task.getResult().getString("PostInfo");
++                        String postUrlImage = task.getResult().getString("Image");
++
++                        Log.d("StoreOwnerProfileActivity", "Current StoreName Retrieved: " + storeName);
++                        postCaptionEdit.setText(postC);
++                        Picasso.get().load(postUrlImage).into(postPicture);
++
++
++                    }
++
++
++                });
++    }
++
++    public void updatePost(){
++        String postCap = postCaptionEdit.getText().toString();
++
++        // Check if a new image is selected
++        if (imageUri != null) {
++            // Upload the image to Firebase Storage
++            String imageName = "post_image_" + System.currentTimeMillis() + ".jpg";
++            StorageReference imageRef = mImageRef.child(imageName);
++
++            imageRef.putFile(imageUri)
++                    .addOnSuccessListener(taskSnapshot -> {
++                        // Get the URL of the uploaded image
++                        imageRef.getDownloadUrl().addOnSuccessListener(uri -> {
++                            String imageUrl = uri.toString();
++
++                            // Update Firestore document with the new data including the image URL
++                            DocumentReference docRef = db.collection("Post").document(String.valueOf(postId));
++                            Map<String, Object> updatedData = new HashMap<>();
++                            updatedData.put("PostInfo", postCap);
++                            updatedData.put("ImageUrl", imageUrl); // Add the image URL
++
++                            // Update the document with the new data
++                            docRef.update(updatedData)
++                                    .addOnSuccessListener(aVoid -> {
++                                        Toast.makeText(EditStorePostActivity.this, "Post Successfully Updated", Toast.LENGTH_SHORT).show();
++                                    })
++                                    .addOnFailureListener(e -> {
++                                        Toast.makeText(EditStorePostActivity.this, "Store Profile failed to update", Toast.LENGTH_SHORT).show();
++                                    });
++                        });
++                    })
++                    .addOnFailureListener(e -> {
++                        Toast.makeText(EditStorePostActivity.this, "Failed to upload image", Toast.LENGTH_SHORT).show();
++                    });
++        } else {
++            // If no new image is selected, update Firestore document with other data only
++            DocumentReference docRef = db.collection("Post").document(postId);
++            Map<String, Object> updatedData = new HashMap<>();
++            updatedData.put("PostInfo", postCap);
++
++
++            docRef.update(updatedData)
++                    .addOnSuccessListener(aVoid -> {
++                        Toast.makeText(EditStorePostActivity.this, "Post Successfully Updated", Toast.LENGTH_SHORT).show();
++                    })
++                    .addOnFailureListener(e -> {
++                        Toast.makeText(EditStorePostActivity.this, "Store Profile failed to update", Toast.LENGTH_SHORT).show();
++                    });
++        }
++    }
++
++    @Override
++    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
++        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
++        if (requestCode == PERMISSION_REQUEST_CODE) {
++            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
++                // Permission granted, proceed with accessing external storage
++            } else {
++                // Permission denied, show a message to the user
++                Toast.makeText(this, "Permission to access external storage is required.", Toast.LENGTH_SHORT).show();
++            }
++        }
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/fyp_ilikethatcoffee/StoreCreatePostActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.fyp_ilikethatcoffee;\r\n\r\nimport android.content.Intent;\r\nimport android.net.Uri;\r\nimport android.os.Bundle;\r\nimport android.view.MenuItem;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\nimport android.widget.EditText;\r\nimport android.widget.ImageView;\r\nimport android.widget.TextView;\r\nimport android.widget.Toast;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport com.google.android.gms.tasks.OnCompleteListener;\r\nimport com.google.android.gms.tasks.OnFailureListener;\r\nimport com.google.android.gms.tasks.OnSuccessListener;\r\nimport com.google.android.gms.tasks.Task;\r\nimport com.google.android.material.bottomnavigation.BottomNavigationView;\r\nimport com.google.firebase.Timestamp;\r\nimport com.google.firebase.auth.FirebaseAuth;\r\nimport com.google.firebase.auth.FirebaseUser;\r\nimport com.google.firebase.firestore.FieldValue;\r\nimport com.google.firebase.firestore.FirebaseFirestore;\r\nimport com.google.firebase.firestore.QueryDocumentSnapshot;\r\nimport com.google.firebase.firestore.QuerySnapshot;\r\nimport com.google.firebase.storage.FirebaseStorage;\r\nimport com.google.firebase.storage.StorageReference;\r\nimport com.google.firebase.storage.UploadTask;\r\nimport com.squareup.picasso.Picasso;\r\n\r\nimport java.util.HashMap;\r\nimport java.util.Map;\r\n\r\n\r\npublic class StoreCreatePostActivity extends AppCompatActivity {\r\n\r\n    private static final int RC_SIGN_IN = 201;\r\n\r\n    private static final int PICK_IMAGE_REQUEST = 111;\r\n\r\n    private int postID = 1; // Default value\r\n\r\n\r\n    private FirebaseAuth auth;\r\n    private FirebaseFirestore db; // Declare Firestore instance\r\n\r\n    private FirebaseStorage storage;\r\n    private StorageReference mImageRef;\r\n    private Uri imageUri;\r\n    private FirebaseUser user;\r\n\r\n    private ImageView post_picture, exit_icon;\r\n    private EditText post_caption;\r\n    private Button post_button;\r\n    private TextView selectImageText;\r\n    private FieldValue FieldValue;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_store_create_post);\r\n\r\n\r\n        auth = FirebaseAuth.getInstance();\r\n        db = FirebaseFirestore.getInstance(); // Initialize Firestore instance\r\n        mImageRef = FirebaseStorage.getInstance().getReference().child(\"Store Post Image\");\r\n        exit_icon = findViewById(R.id.exit_icon);\r\n\r\n        post_picture = findViewById(R.id.post_picture);\r\n        post_caption = findViewById(R.id.post_caption_text);\r\n        post_button = findViewById(R.id.post_button);\r\n        selectImageText = findViewById(R.id.select_image_label);\r\n        int previousItemId = getIntent().getIntExtra(\"previousItemId\", -1);\r\n\r\n        user = auth.getCurrentUser();\r\n        if (user == null){\r\n            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);\r\n            startActivity(intent);\r\n            finish();\r\n        }\r\n\r\n        post_button.setOnClickListener(new View.OnClickListener(){\r\n            @Override\r\n            public void onClick(View v) {\r\n                createPost();\r\n            }\r\n        });\r\n\r\n        exit_icon.setOnClickListener(new View.OnClickListener(){\r\n            @Override\r\n            public void onClick(View v) {\r\n                // Finish the current activity\r\n                // Send the selected item ID back to the parent activity\r\n                Intent intent = new Intent();\r\n\r\n                // Determine the desired activity based on some condition\r\n                int desiredItemId;\r\n                if (previousItemId == R.id.navigation_profile) {\r\n                    desiredItemId = R.id.navigation_profile;\r\n                }\r\n                else {\r\n                    desiredItemId = R.id.navigation_home; // Default activity\r\n                }\r\n\r\n                intent.putExtra(\"selectedItemId\", desiredItemId);\r\n                setResult(RESULT_OK, intent);\r\n                finish();\r\n\r\n                //Intent intent = new Intent();\r\n                //intent.putExtra(\"selectedItemId\", R.id.navigation_home);\r\n                //setResult(RESULT_OK, intent);\r\n                //finish();\r\n            }\r\n        });\r\n\r\n        post_picture.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                selectImageFromGallery();\r\n            }\r\n        });\r\n\r\n        // Retrieve the Post ID from Firestore\r\n        db.collection(\"Post\")\r\n                .get()\r\n                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {\r\n                    @Override\r\n                    public void onComplete(@NonNull Task<QuerySnapshot> task) {\r\n                        if (task.isSuccessful()) {\r\n                            // Check if any documents are retrieved\r\n                            if (!task.getResult().isEmpty()) {\r\n                                int tempPostId = 1; // Start with 1 if no documents are found\r\n                                for (QueryDocumentSnapshot document : task.getResult()) {\r\n                                    // Extract the review ID from the document ID\r\n                                    String documentId = document.getId();\r\n                                    int id = Integer.parseInt(documentId);\r\n                                    // Update the reviewId if the current ID is greater\r\n                                    if (id >= tempPostId) {\r\n                                        tempPostId = id + 1;\r\n                                    }\r\n                                }\r\n                                // Now tempPostId contains the next available ID\r\n                                initializePostId(tempPostId);\r\n                            } else {\r\n                                // No documents found, initialize with default value\r\n                                initializePostId(postID);\r\n                            }\r\n                        } else {\r\n                            // Error getting review documents\r\n                            Toast.makeText(StoreCreatePostActivity.this, \"Error getting post documents: \" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();\r\n                        }\r\n                    }\r\n                });\r\n\r\n    }\r\n\r\n    private void initializePostId(int tempPostId) {\r\n        this.postID = tempPostId;\r\n        //Toast.makeText(StoreCreatePostActivity.this, \"Post ID initialized: \" + postID, Toast.LENGTH_SHORT).show();\r\n    }\r\n\r\n\r\n    private void createPost(){\r\n        String postCaption = post_caption.getText().toString();\r\n\r\n        if (imageUri == null) {\r\n            Toast.makeText(this, \"Select image\", Toast.LENGTH_SHORT).show();\r\n        } else if (postCaption.isEmpty()) {\r\n            Toast.makeText(this, \"Add a caption\", Toast.LENGTH_SHORT).show();\r\n        } else {\r\n            //progressDialog.show();\r\n            mImageRef.child(user.getUid()).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {\r\n                @Override\r\n                public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {\r\n                    if (task.isSuccessful()) {\r\n                        mImageRef.child(user.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {\r\n                            @Override\r\n                            public void onSuccess(Uri uri) {\r\n\r\n                                setPostText(uri.toString());\r\n                            }\r\n                        });\r\n                    } else {\r\n                        //progressDialog.dismiss();\r\n                        Toast.makeText(StoreCreatePostActivity.this, \"\" + task.getException().toString(), Toast.LENGTH_SHORT).show();\r\n                    }\r\n                }\r\n            });\r\n        }\r\n    }\r\n\r\n    private void setPostText(String image){\r\n        String postCaption = post_caption.getText().toString();\r\n        String usern = user.getEmail();\r\n\r\n        db.collection(\"Store\").document(usern)\r\n                .get()\r\n                .addOnCompleteListener(task -> {\r\n                    if (task.isSuccessful() && task.getResult() != null) {\r\n                        String storeName = task.getResult().getString(\"StoreName\");\r\n\r\n                        // Inside the callback, so storeNameF is accessible\r\n                        Map<String, Object> Post = new HashMap<>();\r\n                        Post.put(\"PostInfo\", postCaption);\r\n                        Post.put(\"UserAccountId\", usern);\r\n                        Post.put(\"Image\", image);\r\n                        Post.put(\"StoreName\", storeName); // Store the value directly\r\n                        Post.put(\"DateCreated\", FieldValue.serverTimestamp()); // Include timestamp\r\n\r\n                        // Now you can proceed with saving the post to Firestore\r\n                        // For example:\r\n                        db.collection(\"Post\").document(String.valueOf(postID))\r\n                                .set(Post)\r\n                                .addOnSuccessListener(new OnSuccessListener<Void>() {\r\n                                    @Override\r\n                                    public void onSuccess(Void aVoid) {\r\n                                        Toast.makeText(StoreCreatePostActivity.this, \"Posted!\", Toast.LENGTH_SHORT).show();\r\n                                        // Clear input fields after successful submission\r\n                                        post_caption.setText(\"\");\r\n                                        // Increment post ID for the next review\r\n                                        postID++;\r\n                                        // Finish the activity and go back to the previous page\r\n                                        finish();\r\n                                    }\r\n                                })\r\n                                .addOnFailureListener(new OnFailureListener() {\r\n                                    @Override\r\n                                    public void onFailure(@NonNull Exception e) {\r\n                                        Toast.makeText(StoreCreatePostActivity.this, \"Failed to post, please try again\", Toast.LENGTH_SHORT).show();\r\n                                    }\r\n                                });\r\n                    } else {\r\n                        // Handle the case where the document doesn't exist or there's an error\r\n                    }\r\n                });\r\n\r\n        /*\r\n        String postCaption = post_caption.getText().toString();\r\n        String usern;\r\n        String storeNameF;\r\n        usern = user.getEmail();\r\n\r\n\r\n        Map<String, Object> Post = new HashMap<>();\r\n        Post.put(\"PostInfo\", postCaption);\r\n        Post.put(\"UserAccountId\", usern);\r\n        Post.put(\"Image\", image);\r\n        Post.put(\"DateCreated\", FieldValue.serverTimestamp()); // Include timestamp\r\n\r\n        db.collection(\"Post\").document(String.valueOf(postID))\r\n                .set(Post)\r\n                .addOnSuccessListener(new OnSuccessListener<Void>() {\r\n                    @Override\r\n                    public void onSuccess(Void aVoid) {\r\n                        Toast.makeText(StoreCreatePostActivity.this, \"Posted!\", Toast.LENGTH_SHORT).show();\r\n                        // Clear input fields after successful submission\r\n                        post_caption.setText(\"\");\r\n                        // Increment post ID for the next review\r\n                        postID++;\r\n                        // Finish the activity and go back to the previous page\r\n                        finish();\r\n                    }\r\n                })\r\n                .addOnFailureListener(new OnFailureListener() {\r\n                    @Override\r\n                    public void onFailure(@NonNull Exception e) {\r\n                        Toast.makeText(StoreCreatePostActivity.this, \"Failed to post, please try again\", Toast.LENGTH_SHORT).show();\r\n                    }\r\n                });\r\n\r\n         */\r\n    }\r\n\r\n    private void selectImageFromGallery() {\r\n        Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);\r\n        startActivityForResult(intent, PICK_IMAGE_REQUEST);\r\n    }\r\n    @Override\r\n    protected void onActivityResult(int requestCode, int resultCode, Intent data) {\r\n        super.onActivityResult(requestCode, resultCode, data);\r\n\r\n        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {\r\n            imageUri = data.getData();\r\n            post_picture.setImageURI(imageUri);\r\n            selectImageText.setVisibility(View.GONE);\r\n        }\r\n    }\r\n\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreCreatePostActivity.java b/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreCreatePostActivity.java
+--- a/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreCreatePostActivity.java	(revision 406321b96ff28198a1d13d0e9ac2b5068040d8d6)
++++ b/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreCreatePostActivity.java	(date 1716025047571)
+@@ -1,8 +1,17 @@
+ package com.example.fyp_ilikethatcoffee;
+ 
++
++import android.Manifest;
++import android.app.AlertDialog;
+ import android.content.Intent;
++import android.content.pm.PackageManager;
++import android.graphics.Bitmap;
++import android.graphics.BitmapFactory;
+ import android.net.Uri;
++import android.os.Build;
+ import android.os.Bundle;
++import android.os.Environment;
++import android.provider.MediaStore;
+ import android.view.MenuItem;
+ import android.view.View;
+ import android.widget.Button;
+@@ -12,7 +21,11 @@
+ import android.widget.Toast;
+ 
+ import androidx.annotation.NonNull;
++import androidx.annotation.Nullable;
+ import androidx.appcompat.app.AppCompatActivity;
++import androidx.core.app.ActivityCompat;
++import androidx.core.content.ContextCompat;
++import androidx.core.content.FileProvider;
+ 
+ import com.google.android.gms.tasks.OnCompleteListener;
+ import com.google.android.gms.tasks.OnFailureListener;
+@@ -31,16 +44,25 @@
+ import com.google.firebase.storage.UploadTask;
+ import com.squareup.picasso.Picasso;
+ 
++import java.io.File;
++import java.io.FileNotFoundException;
++import java.io.IOException;
++import java.io.InputStream;
++import java.text.SimpleDateFormat;
++import java.util.Date;
+ import java.util.HashMap;
++import java.util.Locale;
+ import java.util.Map;
+ 
+-
+ public class StoreCreatePostActivity extends AppCompatActivity {
+ 
+     private static final int RC_SIGN_IN = 201;
+ 
+     private static final int PICK_IMAGE_REQUEST = 111;
++    private static final int PERMISSION_REQUEST_CODE = 112;
+ 
++
++    private static final int REQUEST_IMAGE_CAPTURE = 2;
+     private int postID = 1; // Default value
+ 
+ 
+@@ -52,6 +74,7 @@
+     private Uri imageUri;
+     private FirebaseUser user;
+ 
++    private String currentPhotoPath;
+     private ImageView post_picture, exit_icon;
+     private EditText post_caption;
+     private Button post_button;
+@@ -63,7 +86,6 @@
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_store_create_post);
+ 
+-
+         auth = FirebaseAuth.getInstance();
+         db = FirebaseFirestore.getInstance(); // Initialize Firestore instance
+         mImageRef = FirebaseStorage.getInstance().getReference().child("Store Post Image");
+@@ -76,20 +98,35 @@
+         int previousItemId = getIntent().getIntExtra("previousItemId", -1);
+ 
+         user = auth.getCurrentUser();
+-        if (user == null){
++        if (user == null) {
+             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+             startActivity(intent);
+             finish();
+         }
+ 
+-        post_button.setOnClickListener(new View.OnClickListener(){
++        // Check for permissions
++        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
++            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_IMAGES)
++                    != PackageManager.PERMISSION_GRANTED) {
++                ActivityCompat.requestPermissions(this,
++                        new String[]{Manifest.permission.READ_MEDIA_IMAGES}, PERMISSION_REQUEST_CODE);
++            }
++        } else {
++            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
++                    != PackageManager.PERMISSION_GRANTED) {
++                ActivityCompat.requestPermissions(this,
++                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
++            }
++        }
++
++        post_button.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 createPost();
+             }
+         });
+ 
+-        exit_icon.setOnClickListener(new View.OnClickListener(){
++        exit_icon.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 // Finish the current activity
+@@ -100,26 +137,24 @@
+                 int desiredItemId;
+                 if (previousItemId == R.id.navigation_profile) {
+                     desiredItemId = R.id.navigation_profile;
+-                }
+-                else {
+-                    desiredItemId = R.id.navigation_home; // Default activity
++                } else {
++                    desiredItemId = R.id.navigation_profile; // Default activity
+                 }
+ 
+                 intent.putExtra("selectedItemId", desiredItemId);
+                 setResult(RESULT_OK, intent);
+                 finish();
+ 
+-                //Intent intent = new Intent();
+-                //intent.putExtra("selectedItemId", R.id.navigation_home);
+-                //setResult(RESULT_OK, intent);
+-                //finish();
+             }
+         });
+ 
+         post_picture.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+-                selectImageFromGallery();
++                selectImage();
++                if (post_picture != null){
++                    selectImageText.setVisibility(View.GONE);
++                }
+             }
+         });
+ 
+@@ -162,8 +197,66 @@
+         //Toast.makeText(StoreCreatePostActivity.this, "Post ID initialized: " + postID, Toast.LENGTH_SHORT).show();
+     }
+ 
++    private void selectImage() {
++        final CharSequence[] options = {"Take Photo", "Choose from Gallery", "Cancel"};
++        AlertDialog.Builder builder = new AlertDialog.Builder(this);
++        builder.setTitle("Add Photo!");
++        builder.setItems(options, (dialog, item) -> {
++            if ("Take Photo".equals(options[item])) {
++                dispatchTakePictureIntent();
++            } else if ("Choose from Gallery".equals(options[item])) {
++                openGallery();
++            } else {
++                dialog.dismiss();
++            }
++        });
++        builder.show();
++    }
++
++
++
++    private File createImageFile() throws IOException {
++        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
++        String imageFileName = "JPEG_" + timeStamp + "_";
++        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
++        File image = File.createTempFile(
++                imageFileName,
++                ".jpg",
++                storageDir
++        );
++        currentPhotoPath = image.getAbsolutePath();
++        return image;
++    }
++
++    private void dispatchTakePictureIntent() {
++        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
++        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
++            File photoFile = null;
++            try {
++                photoFile = createImageFile();
++            } catch (IOException ex) {
++                Toast.makeText(this, "Error occurred while creating the file", Toast.LENGTH_SHORT).show();
++                return;
++            }
++            if (photoFile != null) {
++                Uri photoURI = FileProvider.getUriForFile(this,
++                        "com.example.fyp_ilikethatcoffee.fileprovider",  // Make sure this matches the authority in AndroidManifest.xml
++                        photoFile);
++                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
++                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
++            }
++        }
++    }
++
++    private void openGallery() {
++        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
++        intent.setType("image/*");
++        startActivityForResult(intent, PICK_IMAGE_REQUEST);
++    }
++
++
+ 
+-    private void createPost(){
++    private void createPost() {
+         String postCaption = post_caption.getText().toString();
+ 
+         if (imageUri == null) {
+@@ -192,7 +285,7 @@
+         }
+     }
+ 
+-    private void setPostText(String image){
++    private void setPostText(String image) {
+         String postCaption = post_caption.getText().toString();
+         String usern = user.getEmail();
+ 
+@@ -209,6 +302,7 @@
+                         Post.put("Image", image);
+                         Post.put("StoreName", storeName); // Store the value directly
+                         Post.put("DateCreated", FieldValue.serverTimestamp()); // Include timestamp
++                        Post.put("PostId", String.valueOf(postID)); // Add postId to the document
+ 
+                         // Now you can proceed with saving the post to Firestore
+                         // For example:
+@@ -237,58 +331,296 @@
+                     }
+                 });
+ 
+-        /*
++    }
++
++    @Override
++    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
++        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
++        if (requestCode == PERMISSION_REQUEST_CODE) {
++            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
++                // Permission granted, proceed with accessing external storage
++            } else {
++                // Permission denied, show a message to the user
++                Toast.makeText(this, "Permission to access external storage is required.", Toast.LENGTH_SHORT).show();
++            }
++        }
++    }
++
++    private void selectImageFromGallery() {
++        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
++        startActivityForResult(intent, PICK_IMAGE_REQUEST);
++    }
++
++    @Override
++    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
++        super.onActivityResult(requestCode, resultCode, data);
++        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
++            imageUri = data.getData();
++            post_picture.setImageURI(imageUri);
++        } else if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
++            imageUri = Uri.fromFile(new File(currentPhotoPath));
++            post_picture.setImageURI(imageUri);
++        }
++    }
++}
++
++
++/*
++public class StoreCreatePostActivity extends AppCompatActivity {
++
++    private static final int RC_SIGN_IN = 201;
++
++    private static final int PICK_IMAGE_REQUEST = 111;
++    private static final int PERMISSION_REQUEST_CODE = 112;
++
++
++    private int postID = 1; // Default value
++
++
++    private FirebaseAuth auth;
++    private FirebaseFirestore db; // Declare Firestore instance
++
++    private FirebaseStorage storage;
++    private StorageReference mImageRef;
++    private Uri imageUri;
++    private FirebaseUser user;
++
++    private ImageView post_picture, exit_icon;
++    private EditText post_caption;
++    private Button post_button;
++    private TextView selectImageText;
++    private FieldValue FieldValue;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_store_create_post);
++
++        auth = FirebaseAuth.getInstance();
++        db = FirebaseFirestore.getInstance(); // Initialize Firestore instance
++        mImageRef = FirebaseStorage.getInstance().getReference().child("Store Post Image");
++        exit_icon = findViewById(R.id.exit_icon);
++
++        post_picture = findViewById(R.id.post_picture);
++        post_caption = findViewById(R.id.post_caption_text);
++        post_button = findViewById(R.id.post_button);
++        selectImageText = findViewById(R.id.select_image_label);
++        int previousItemId = getIntent().getIntExtra("previousItemId", -1);
++
++        user = auth.getCurrentUser();
++        if (user == null) {
++            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
++            startActivity(intent);
++            finish();
++        }
++
++        // Check for permissions
++        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
++            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_IMAGES)
++                    != PackageManager.PERMISSION_GRANTED) {
++                ActivityCompat.requestPermissions(this,
++                        new String[]{Manifest.permission.READ_MEDIA_IMAGES}, PERMISSION_REQUEST_CODE);
++            }
++        } else {
++            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
++                    != PackageManager.PERMISSION_GRANTED) {
++                ActivityCompat.requestPermissions(this,
++                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
++            }
++        }
++
++        post_button.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                createPost();
++            }
++        });
++
++        exit_icon.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                // Finish the current activity
++                // Send the selected item ID back to the parent activity
++                Intent intent = new Intent();
++
++                // Determine the desired activity based on some condition
++                int desiredItemId;
++                if (previousItemId == R.id.navigation_profile) {
++                    desiredItemId = R.id.navigation_profile;
++                } else {
++                    desiredItemId = R.id.navigation_home; // Default activity
++                }
++
++                intent.putExtra("selectedItemId", desiredItemId);
++                setResult(RESULT_OK, intent);
++                finish();
++
++            }
++        });
++
++        post_picture.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                selectImageFromGallery();
++            }
++        });
++
++        // Retrieve the Post ID from Firestore
++        db.collection("Post")
++                .get()
++                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
++                    @Override
++                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
++                        if (task.isSuccessful()) {
++                            // Check if any documents are retrieved
++                            if (!task.getResult().isEmpty()) {
++                                int tempPostId = 1; // Start with 1 if no documents are found
++                                for (QueryDocumentSnapshot document : task.getResult()) {
++                                    // Extract the review ID from the document ID
++                                    String documentId = document.getId();
++                                    int id = Integer.parseInt(documentId);
++                                    // Update the reviewId if the current ID is greater
++                                    if (id >= tempPostId) {
++                                        tempPostId = id + 1;
++                                    }
++                                }
++                                // Now tempPostId contains the next available ID
++                                initializePostId(tempPostId);
++                            } else {
++                                // No documents found, initialize with default value
++                                initializePostId(postID);
++                            }
++                        } else {
++                            // Error getting review documents
++                            Toast.makeText(StoreCreatePostActivity.this, "Error getting post documents: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
++                        }
++                    }
++                });
++
++    }
++
++    private void initializePostId(int tempPostId) {
++        this.postID = tempPostId;
++        //Toast.makeText(StoreCreatePostActivity.this, "Post ID initialized: " + postID, Toast.LENGTH_SHORT).show();
++    }
++
++
++    private void createPost() {
++        String postCaption = post_caption.getText().toString();
++
++        if (imageUri == null) {
++            Toast.makeText(this, "Select image", Toast.LENGTH_SHORT).show();
++        } else if (postCaption.isEmpty()) {
++            Toast.makeText(this, "Add a caption", Toast.LENGTH_SHORT).show();
++        } else {
++            //progressDialog.show();
++            mImageRef.child(user.getUid()).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
++                @Override
++                public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
++                    if (task.isSuccessful()) {
++                        mImageRef.child(user.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
++                            @Override
++                            public void onSuccess(Uri uri) {
++
++                                setPostText(uri.toString());
++                            }
++                        });
++                    } else {
++                        //progressDialog.dismiss();
++                        Toast.makeText(StoreCreatePostActivity.this, "" + task.getException().toString(), Toast.LENGTH_SHORT).show();
++                    }
++                }
++            });
++        }
++    }
++
++    private void setPostText(String image) {
+         String postCaption = post_caption.getText().toString();
+-        String usern;
+-        String storeNameF;
+-        usern = user.getEmail();
++        String usern = user.getEmail();
+ 
++        db.collection("Store").document(usern)
++                .get()
++                .addOnCompleteListener(task -> {
++                    if (task.isSuccessful() && task.getResult() != null) {
++                        String storeName = task.getResult().getString("StoreName");
+ 
+-        Map<String, Object> Post = new HashMap<>();
+-        Post.put("PostInfo", postCaption);
+-        Post.put("UserAccountId", usern);
+-        Post.put("Image", image);
+-        Post.put("DateCreated", FieldValue.serverTimestamp()); // Include timestamp
++                        // Inside the callback, so storeNameF is accessible
++                        Map<String, Object> Post = new HashMap<>();
++                        Post.put("PostInfo", postCaption);
++                        Post.put("UserAccountId", usern);
++                        Post.put("Image", image);
++                        Post.put("StoreName", storeName); // Store the value directly
++                        Post.put("DateCreated", FieldValue.serverTimestamp()); // Include timestamp
++                        Post.put("PostId", postID); // Add postId to the document
+ 
+-        db.collection("Post").document(String.valueOf(postID))
+-                .set(Post)
+-                .addOnSuccessListener(new OnSuccessListener<Void>() {
+-                    @Override
+-                    public void onSuccess(Void aVoid) {
+-                        Toast.makeText(StoreCreatePostActivity.this, "Posted!", Toast.LENGTH_SHORT).show();
+-                        // Clear input fields after successful submission
+-                        post_caption.setText("");
+-                        // Increment post ID for the next review
+-                        postID++;
+-                        // Finish the activity and go back to the previous page
+-                        finish();
+-                    }
+-                })
+-                .addOnFailureListener(new OnFailureListener() {
+-                    @Override
+-                    public void onFailure(@NonNull Exception e) {
+-                        Toast.makeText(StoreCreatePostActivity.this, "Failed to post, please try again", Toast.LENGTH_SHORT).show();
++                        // Now you can proceed with saving the post to Firestore
++                        // For example:
++                        db.collection("Post").document(String.valueOf(postID))
++                                .set(Post)
++                                .addOnSuccessListener(new OnSuccessListener<Void>() {
++                                    @Override
++                                    public void onSuccess(Void aVoid) {
++                                        Toast.makeText(StoreCreatePostActivity.this, "Posted!", Toast.LENGTH_SHORT).show();
++                                        // Clear input fields after successful submission
++                                        post_caption.setText("");
++                                        // Increment post ID for the next review
++                                        postID++;
++                                        // Finish the activity and go back to the previous page
++                                        finish();
++                                    }
++                                })
++                                .addOnFailureListener(new OnFailureListener() {
++                                    @Override
++                                    public void onFailure(@NonNull Exception e) {
++                                        Toast.makeText(StoreCreatePostActivity.this, "Failed to post, please try again", Toast.LENGTH_SHORT).show();
++                                    }
++                                });
++                    } else {
++                        // Handle the case where the document doesn't exist or there's an error
+                     }
+                 });
+ 
+-         */
++    }
++
++    @Override
++    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
++        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
++        if (requestCode == PERMISSION_REQUEST_CODE) {
++            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
++                // Permission granted, proceed with accessing external storage
++            } else {
++                // Permission denied, show a message to the user
++                Toast.makeText(this, "Permission to access external storage is required.", Toast.LENGTH_SHORT).show();
++            }
++        }
+     }
+ 
+     private void selectImageFromGallery() {
+-        Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
++        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+         startActivityForResult(intent, PICK_IMAGE_REQUEST);
+     }
++
+     @Override
+     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+         super.onActivityResult(requestCode, resultCode, data);
+ 
+         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
+             imageUri = data.getData();
+-            post_picture.setImageURI(imageUri);
+-            selectImageText.setVisibility(View.GONE);
++
++            try {
++                if (imageUri != null) {
++                    // Use ContentResolver to get the input stream
++                    InputStream inputStream = getContentResolver().openInputStream(imageUri);
++                    Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
++                    post_picture.setImageBitmap(bitmap);
++                    selectImageText.setVisibility(View.GONE);
++                }
++            } catch (FileNotFoundException e) {
++                e.printStackTrace();
++                Toast.makeText(this, "Error getting selected file: " + e.getMessage(), Toast.LENGTH_SHORT).show();
++            }
+         }
+     }
+-
+-
++}
+ 
+-}
+\ No newline at end of file
++ */
+\ No newline at end of file
+Index: app/src/main/java/com/example/fyp_ilikethatcoffee/ui/home/PostsAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.fyp_ilikethatcoffee.ui.home;\r\n\r\nimport android.content.Context;\r\nimport android.content.Intent;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.ImageView;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.fragment.app.FragmentActivity;\r\nimport androidx.fragment.app.FragmentManager;\r\nimport androidx.recyclerview.widget.RecyclerView;\r\n\r\nimport com.bumptech.glide.Glide;\r\nimport com.example.fyp_ilikethatcoffee.ConsumerStoreProfileActivity;\r\nimport com.example.fyp_ilikethatcoffee.Dialog.ConsumerPostDialogueFragment;\r\nimport com.example.fyp_ilikethatcoffee.Posts.Post;\r\nimport com.example.fyp_ilikethatcoffee.R;\r\nimport com.example.fyp_ilikethatcoffee.Store;\r\nimport com.google.firebase.firestore.FirebaseFirestore;\r\n\r\nimport java.text.SimpleDateFormat;\r\nimport java.util.List;\r\nimport java.util.Locale;\r\n\r\npublic class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> {\r\n\r\n    private List<Post> postList;\r\n\r\n    public PostsAdapter(List<Post> postList) {\r\n        this.postList = postList;\r\n    }\r\n\r\n    @NonNull\r\n    @Override\r\n    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {\r\n        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.post_item, parent, false);\r\n        return new ViewHolder(view);\r\n    }\r\n\r\n    @Override\r\n    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {\r\n        Post post = postList.get(position);\r\n\r\n        // Existing code to handle post details\r\n        String postCaption = post.getPostInfo();\r\n        int maxLength = 100;\r\n        if (postCaption.length() > maxLength) {\r\n            holder.readMoreTextView.setVisibility(View.VISIBLE);\r\n            holder.storePostCaption.setText(postCaption.substring(0, maxLength) + \"...\");\r\n            holder.readMoreTextView.setOnClickListener(v -> {\r\n                holder.storePostCaption.setText(postCaption);\r\n                holder.readMoreTextView.setVisibility(View.GONE);\r\n            });\r\n        } else {\r\n            holder.storePostCaption.setText(postCaption);\r\n            holder.readMoreTextView.setVisibility(View.GONE);\r\n        }\r\n\r\n\r\n        SimpleDateFormat dateFormat = new SimpleDateFormat(\"MMMM dd, yyyy\", Locale.getDefault());\r\n        String dateString = dateFormat.format(post.getDateCreated().toDate());\r\n        holder.postDate.setText(dateString);\r\n\r\n        Glide.with(holder.itemView.getContext())\r\n                .load(post.getImage())\r\n                .into(holder.postPicture);\r\n\r\n        // Fetch and display store details\r\n        FirebaseFirestore.getInstance().collection(\"Store\")\r\n                .document(post.getUserAccountId())\r\n                .get()\r\n                .addOnSuccessListener(documentSnapshot -> {\r\n                    Store store = documentSnapshot.toObject(Store.class);\r\n                    if (store != null) {\r\n                        holder.storeDisplayName.setText(store.getStoreName());\r\n                        Glide.with(holder.itemView.getContext()).load(store.getImageUrl()).into(holder.profilePic);\r\n                        holder.bindToStoreProfile(holder.itemView.getContext(), store); // Set the onClickListeners\r\n\r\n                        holder.meatballMoreIcon.setOnClickListener(new View.OnClickListener() {\r\n                            @Override\r\n                            public void onClick(View v) {\r\n                                // Create an instance of ConsumerPostDialogueFragment\r\n                                ConsumerPostDialogueFragment dialogFragment =\r\n                                        ConsumerPostDialogueFragment.newInstance(store.getUserAccountId(), post.getPostInfo(), post.getImage());\r\n                                // Show the dialog fragment\r\n                                FragmentManager fragmentManager = ((FragmentActivity) holder.itemView.getContext()).getSupportFragmentManager();\r\n                                dialogFragment.show(fragmentManager, \"ConsumerPostDialogFragment\");\r\n                            }\r\n                        });\r\n                    }\r\n                });\r\n    }\r\n\r\n\r\n    @Override\r\n    public int getItemCount() {\r\n        return postList.size();\r\n    }\r\n\r\n    public static class ViewHolder extends RecyclerView.ViewHolder {\r\n        TextView storeDisplayName, storePostCaption, postDate, readMoreTextView;\r\n        ImageView profilePic, postPicture, meatballMoreIcon;\r\n\r\n        public ViewHolder(View itemView) {\r\n            super(itemView);\r\n            storeDisplayName = itemView.findViewById(R.id.store_display_name);\r\n            storePostCaption = itemView.findViewById(R.id.post_caption_text);\r\n            postDate = itemView.findViewById(R.id.date_text);\r\n            readMoreTextView = itemView.findViewById(R.id.read_more_text);\r\n            profilePic = itemView.findViewById(R.id.store_profile_picture_p);\r\n            postPicture = itemView.findViewById(R.id.image_post);\r\n            meatballMoreIcon = itemView.findViewById(R.id.meatball_icon_more);\r\n        }\r\n\r\n        // Add a method to setup onClick listeners\r\n        public void bindToStoreProfile(Context context, Store store) {\r\n            View.OnClickListener listener = v -> {\r\n                Intent intent = new Intent(context, ConsumerStoreProfileActivity.class);\r\n                intent.putExtra(\"StoreName\", store.getStoreName());\r\n                intent.putExtra(\"StoreDesc\", store.getStoreDesc());\r\n                intent.putExtra(\"StoreAddress\", store.getStoreAddress());\r\n                intent.putExtra(\"StoreEmail\", store.getUserAccountId());\r\n                context.startActivity(intent);\r\n            };\r\n\r\n            profilePic.setOnClickListener(listener);\r\n            storeDisplayName.setOnClickListener(listener);\r\n        }\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/fyp_ilikethatcoffee/ui/home/PostsAdapter.java b/app/src/main/java/com/example/fyp_ilikethatcoffee/ui/home/PostsAdapter.java
+--- a/app/src/main/java/com/example/fyp_ilikethatcoffee/ui/home/PostsAdapter.java	(revision 406321b96ff28198a1d13d0e9ac2b5068040d8d6)
++++ b/app/src/main/java/com/example/fyp_ilikethatcoffee/ui/home/PostsAdapter.java	(date 1715918318346)
+@@ -2,6 +2,7 @@
+ 
+ import android.content.Context;
+ import android.content.Intent;
++import android.util.Log;
+ import android.view.LayoutInflater;
+ import android.view.View;
+ import android.view.ViewGroup;
+@@ -19,7 +20,12 @@
+ import com.example.fyp_ilikethatcoffee.Posts.Post;
+ import com.example.fyp_ilikethatcoffee.R;
+ import com.example.fyp_ilikethatcoffee.Store;
++import com.google.android.gms.tasks.OnCompleteListener;
++import com.google.android.gms.tasks.Task;
++import com.google.firebase.firestore.CollectionReference;
+ import com.google.firebase.firestore.FirebaseFirestore;
++import com.google.firebase.firestore.QueryDocumentSnapshot;
++import com.google.firebase.firestore.QuerySnapshot;
+ 
+ import java.text.SimpleDateFormat;
+ import java.util.List;
+@@ -100,6 +106,7 @@
+         return postList.size();
+     }
+ 
++
+     public static class ViewHolder extends RecyclerView.ViewHolder {
+         TextView storeDisplayName, storePostCaption, postDate, readMoreTextView;
+         ImageView profilePic, postPicture, meatballMoreIcon;
+Index: app/src/main/res/layout/activity_edit_store_post.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_edit_store_post.xml b/app/src/main/res/layout/activity_edit_store_post.xml
+new file mode 100644
+--- /dev/null	(date 1716024516235)
++++ b/app/src/main/res/layout/activity_edit_store_post.xml	(date 1716024516235)
+@@ -0,0 +1,90 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="wrap_content"
++    android:background="@color/app_background_color"
++    android:orientation="vertical"
++    tools:context=".Posts.PostFragment">
++
++    <androidx.cardview.widget.CardView
++        android:id="@+id/card_view_store"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_margin="10dp"
++        app:cardCornerRadius="5dp">
++
++        <androidx.constraintlayout.widget.ConstraintLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content">
++
++            <com.google.android.material.imageview.ShapeableImageView
++                android:id="@+id/store_profile_picture_p"
++                android:layout_width="40dp"
++                android:layout_height="40dp"
++                android:layout_marginStart="8dp"
++                android:layout_marginBottom="5dp"
++                android:padding="1dp"
++                android:src="@drawable/store_profile_default"
++                app:layout_constraintBottom_toTopOf="@+id/image_post"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toTopOf="parent"
++                app:layout_constraintVertical_bias="0.421"
++                app:shapeAppearanceOverlay="@style/RoundedSquare"
++                app:strokeColor="@color/white"
++                app:strokeWidth="2dp" />
++
++            <TextView
++                android:id="@+id/store_display_name"
++                style="?android:attr/ratingBarStyleSmall"
++                android:layout_width="150dp"
++                android:layout_height="19dp"
++                android:layout_marginStart="12dp"
++                android:layout_marginTop="16dp"
++                android:text="Store Name"
++                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
++                app:layout_constraintStart_toEndOf="@+id/store_profile_picture_p"
++                app:layout_constraintTop_toTopOf="parent" />
++
++            <ImageView
++                android:id="@+id/image_post"
++                android:layout_width="391dp"
++                android:layout_height="165dp"
++                android:layout_marginTop="64dp"
++                android:src="@drawable/ic_map"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintHorizontal_bias="1.0"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toTopOf="parent"
++                tools:srcCompat="@tools:sample/backgrounds/scenic" />
++
++            <EditText
++                android:id="@+id/post_caption_text"
++                android:layout_width="341dp"
++                android:layout_height="70dp"
++                android:layout_marginStart="16dp"
++                android:layout_marginTop="1dp"
++                android:layout_marginEnd="16dp"
++                android:background="@android:color/transparent"
++                android:inputType="textMultiLine"
++                android:padding="0dp"
++                android:scrollbars="vertical"
++                android:text="Come on down to cafe town with our newest brews and delicious teas! Our new summer promo will cool you down with our latest frappaciono"
++                app:layout_constraintBottom_toBottomOf="parent"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintHorizontal_bias="0.526"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toBottomOf="@+id/image_post"
++                app:layout_constraintVertical_bias="0.0" />
++        </androidx.constraintlayout.widget.ConstraintLayout>
++    </androidx.cardview.widget.CardView>
++
++    <Button
++        android:id="@+id/update_post"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_gravity="center_horizontal"
++        android:text="update_post"
++        app:backgroundTint="@color/app_gold_color"/>
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/fyp_ilikethatcoffee/Dialog/StoreOwnerPostDialogueFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.fyp_ilikethatcoffee.Dialog;\r\n\r\nimport androidx.fragment.app.DialogFragment;\r\n\r\nimport android.app.Dialog;\r\nimport android.os.Bundle;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport androidx.annotation.NonNull;\r\nimport androidx.annotation.Nullable;\r\nimport androidx.fragment.app.DialogFragment;\r\n\r\nimport com.example.fyp_ilikethatcoffee.R;\r\n\r\npublic class StoreOwnerPostDialogueFragment extends DialogFragment {\r\n\r\n    @Nullable\r\n    @Override\r\n    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {\r\n        // Inflate the layout for this fragment\r\n        return inflater.inflate(R.layout.fragment_storeowner_post_dialogue, container, false);\r\n    }\r\n\r\n    @NonNull\r\n    @Override\r\n    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {\r\n        // You can customize your dialog here if needed\r\n        return super.onCreateDialog(savedInstanceState);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/fyp_ilikethatcoffee/Dialog/StoreOwnerPostDialogueFragment.java b/app/src/main/java/com/example/fyp_ilikethatcoffee/Dialog/StoreOwnerPostDialogueFragment.java
+--- a/app/src/main/java/com/example/fyp_ilikethatcoffee/Dialog/StoreOwnerPostDialogueFragment.java	(revision 406321b96ff28198a1d13d0e9ac2b5068040d8d6)
++++ b/app/src/main/java/com/example/fyp_ilikethatcoffee/Dialog/StoreOwnerPostDialogueFragment.java	(date 1716024252612)
+@@ -3,23 +3,82 @@
+ import androidx.fragment.app.DialogFragment;
+ 
+ import android.app.Dialog;
++import android.content.ClipData;
++import android.content.ClipboardManager;
++import android.content.Context;
++import android.content.Intent;
++import android.content.pm.PackageManager;
++import android.net.Uri;
+ import android.os.Bundle;
++import android.util.Log;
+ import android.view.LayoutInflater;
+ import android.view.View;
+ import android.view.ViewGroup;
++import android.widget.LinearLayout;
++import android.widget.Toast;
++
++import com.example.fyp_ilikethatcoffee.ConsumerStoreProfileActivity;
++import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+ import androidx.annotation.NonNull;
+ import androidx.annotation.Nullable;
+ import androidx.fragment.app.DialogFragment;
+ 
+ import com.example.fyp_ilikethatcoffee.R;
++import com.google.firebase.dynamiclinks.DynamicLink;
++import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
++import com.google.firebase.firestore.FirebaseFirestore;
++
++public class StoreOwnerPostDialogueFragment extends BottomSheetDialogFragment {
++    // Keys for the data to pass
++
++    private String storeEmail, postCaption, postImage;
++    private String postId;
++    private FirebaseFirestore db; // Declare Firestore instance
++    LinearLayout shareLayout, editLayout, deleteLayout;
++
++    public static StoreOwnerPostDialogueFragment newInstance(String storeEmail, String postCaption, String postImage, String postId) {
++        StoreOwnerPostDialogueFragment fragment = new StoreOwnerPostDialogueFragment();
++        Bundle args = new Bundle();
++        args.putString("storeEmail", storeEmail);
++        args.putString("postCaption", postCaption);
++        args.putString("postImage", postImage);
++        args.putString("postId", postId);
++        fragment.setArguments(args);
++        return fragment;
++    }
++
++    @Override
++    public void onCreate(@Nullable Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        db = FirebaseFirestore.getInstance(); // Initialize Firestore instance
++
++        if (getArguments() != null) {
++            storeEmail = getArguments().getString("storeEmail");
++            postCaption = getArguments().getString("postCaption");
++            postImage = getArguments().getString("postImage");
++            postId = getArguments().getString("postId");
++
++
++        }
+ 
+-public class StoreOwnerPostDialogueFragment extends DialogFragment {
++
++    }
+ 
+     @Nullable
+     @Override
+     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+         // Inflate the layout for this fragment
+-        return inflater.inflate(R.layout.fragment_storeowner_post_dialogue, container, false);
++        db = FirebaseFirestore.getInstance(); // Initialize Firestore instance
++        Log.d("StoreOwnerDialogueFragment", "Current postId Retrieved: " + postId);
++        View view = inflater.inflate(R.layout.fragment_storeowner_post_dialogue, container, false);
++        shareLayout = view.findViewById(R.id.share_post_click);
++        editLayout = view.findViewById(R.id.edit_post_click);
++        deleteLayout = view.findViewById(R.id.delete_post_click);
++        shareLayout.setOnClickListener(v -> sharePostToChat());
++        editLayout.setOnClickListener(v -> editMyPost());
++        deleteLayout.setOnClickListener(v -> deleteMyPost());
++        return view;
++
+     }
+ 
+     @NonNull
+@@ -28,4 +87,69 @@
+         // You can customize your dialog here if needed
+         return super.onCreateDialog(savedInstanceState);
+     }
++
++    private void sharePostToChat() {
++        String deepLinkUrl = "https://ilikethatcoffee.com/post?storeEmail=" + storeEmail + "&postCaption=" + postCaption + "&postImage=" + postImage;
++        FirebaseDynamicLinks.getInstance().createDynamicLink()
++                .setLink(Uri.parse(deepLinkUrl))
++                .setDomainUriPrefix("https://ilikethatcoffee.page.link")
++                .setAndroidParameters(new DynamicLink.AndroidParameters.Builder().build())
++                .buildShortDynamicLink()
++                .addOnSuccessListener(shortDynamicLink -> {
++                    Uri shortLink = shortDynamicLink.getShortLink();
++
++                    // Copy the link to clipboard
++                    ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
++                    ClipData clip = ClipData.newPlainText("Post Link", shortLink.toString());
++                    clipboard.setPrimaryClip(clip);
++
++                    // Open share dialog
++                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
++                    shareIntent.setType("text/plain");
++                    shareIntent.putExtra(Intent.EXTRA_TEXT, shortLink.toString());
++                    startActivity(Intent.createChooser(shareIntent, "Share Post Link"));
++
++                    Toast.makeText(getContext(), "Link copied to clipboard", Toast.LENGTH_SHORT).show();
++                })
++                .addOnFailureListener(e -> {
++                    Toast.makeText(getContext(), "Failed to create dynamic link", Toast.LENGTH_SHORT).show();
++                });
++    }
++
++    private void editMyPost() {
++        if (postId != null) {
++            Intent intent = new Intent(getContext(), EditStorePostActivity.class);
++            intent.putExtra("storeEmail", storeEmail);
++            intent.putExtra("postId", postId);
++            intent.putExtra("postCaption", postCaption);
++            intent.putExtra("postImage", postImage);
++            startActivity(intent);
++        } else {
++            // Handle the case where postId is null
++            Toast.makeText(getContext(), "Post ID is null", Toast.LENGTH_SHORT).show();
++        }
++    }
++
++    private void deleteMyPost(){if (postId != null) {
++        db.collection("Post")
++                .document(postId)
++                .delete()
++                .addOnSuccessListener(aVoid -> {
++                    // Handle successful deletion
++                    Toast.makeText(getContext(), "Post deleted successfully", Toast.LENGTH_SHORT).show();
++                    // Dismiss the dialog
++                    dismiss();
++                })
++                .addOnFailureListener(e -> {
++                    // Handle failure to delete
++                    Toast.makeText(getContext(), "Failed to delete post", Toast.LENGTH_SHORT).show();
++                    Log.e("StoreOwnerPostDialogueFragment", "Error deleting post", e);
++                });
++    } else {
++        // Handle the case where postId is null
++        Toast.makeText(getContext(), "Post ID is null", Toast.LENGTH_SHORT).show();
++    }
++    }
++
++
+ }
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_storeowner_post_dialogue.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"wrap_content\"\r\n    android:orientation=\"vertical\"\r\n    android:padding=\"16dp\">\r\n\r\n    <!-- Add your views here -->\r\n    <TextView\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"This is a dialog storeowner fragment\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/close_button\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"Close\" />\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_storeowner_post_dialogue.xml b/app/src/main/res/layout/fragment_storeowner_post_dialogue.xml
+--- a/app/src/main/res/layout/fragment_storeowner_post_dialogue.xml	(revision 406321b96ff28198a1d13d0e9ac2b5068040d8d6)
++++ b/app/src/main/res/layout/fragment_storeowner_post_dialogue.xml	(date 1715917338259)
+@@ -1,19 +1,110 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+-    android:orientation="vertical"
++    android:background="@color/app_background_color"
+     android:padding="16dp">
+ 
+-    <!-- Add your views here -->
+-    <TextView
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:text="This is a dialog storeowner fragment" />
++    <LinearLayout
++        android:id="@+id/share_post_click"
++        android:layout_width="180dp"
++        android:layout_height="50dp"
++        android:background="?attr/selectableItemBackground"
++        android:clickable="true"
++        android:focusable="true"
++        android:gravity="center_vertical"
++        android:orientation="horizontal"
++        android:padding="8dp"
++        app:layout_constraintHorizontal_bias="0.0"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent">
++
++        <ImageView
++            android:id="@+id/share_post_icon"
++            android:layout_width="26dp"
++            android:layout_height="26dp"
++            android:layout_gravity="center_vertical"
++            android:layout_marginEnd="8dp"
++            android:src="@drawable/ic_share" />
++
++        <TextView
++            android:id="@+id/share_post_label"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="Share this post"
++            android:textColor="@color/white"
++            android:textSize="16sp" />
++
++    </LinearLayout>
++
++    <LinearLayout
++        android:id="@+id/edit_post_click"
++        android:layout_width="180dp"
++        android:layout_height="50dp"
++        android:background="?attr/selectableItemBackground"
++        android:clickable="true"
++        android:focusable="true"
++        android:gravity="center_vertical"
++        android:orientation="horizontal"
++        android:padding="8dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.0"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/share_post_click">
++
++        <ImageView
++            android:id="@+id/edit_post_icon"
++            android:layout_width="26dp"
++            android:layout_height="26dp"
++            android:layout_gravity="center_vertical"
++            android:layout_marginEnd="8dp"
++            android:src="@drawable/edit_post_icon" />
++
++        <TextView
++            android:id="@+id/edit_post_label"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="Edit this post"
++            android:textColor="@color/white"
++            android:textSize="16sp" />
++
++    </LinearLayout>
+ 
+-    <Button
+-        android:id="@+id/close_button"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:text="Close" />
+-</LinearLayout>
+\ No newline at end of file
++    <LinearLayout
++        android:id="@+id/delete_post_click"
++        android:layout_width="180dp"
++        android:layout_height="50dp"
++        android:background="?attr/selectableItemBackground"
++        android:clickable="true"
++        android:focusable="true"
++        android:gravity="center_vertical"
++        android:orientation="horizontal"
++        android:padding="8dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.0"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/edit_post_click">
++
++        <ImageView
++            android:id="@+id/delete_post_icon"
++            android:layout_width="26dp"
++            android:layout_height="26dp"
++            android:layout_gravity="center_vertical"
++            android:layout_marginEnd="8dp"
++            android:src="@drawable/trash_icon" />
++
++        <TextView
++            android:id="@+id/delete_post_label"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="Delete this post"
++            android:textColor="#FF0F00"
++            android:textSize="16sp" />
++
++    </LinearLayout>
++
++</androidx.constraintlayout.widget.ConstraintLayout>
++
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\">\r\n\r\n    <uses-permission android:name=\"android.permission.INTERNET\" />\r\n    <uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />\r\n    <uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />\r\n    <uses-permission\r\n        android:name=\"android.permission.READ_EXTERNAL_STORAGE\"\r\n        android:maxSdkVersion=\"32\" />\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.FYPILikeThatCoffee\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".ViewStoreProfileActivity\"\r\n            android:exported=\"false\" />\r\n        \r\n        <activity\r\n            android:name=\".HelpActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".ViewFriendActivity\"\r\n            android:exported=\"false\"\r\n            android:theme=\"@style/Theme.FYPILikeThatCoffee\" />\r\n        <activity\r\n            android:name=\".ConsumerProfileActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".StoreCreatePostActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".SettingActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".StoreOwnerProfileActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".FullStoreProfileActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".StoreOwnerUpdateProfileActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".StoreOwnerFirstTineLogIn\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".StoreOwnerHomeActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".SuspendAccountActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".AccountActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".DisplayUsersActivity\"\r\n            android:exported=\"true\" />\r\n        <activity\r\n            android:name=\".SignUpActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".LoginActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n        <activity\r\n            android:name=\".ConsumerViewConsumerProfileActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".MainActivity\"\r\n            android:exported=\"true\" />\r\n\r\n        <meta-data\r\n            android:name=\"com.google.android.geo.API_KEY\"\r\n            android:value=\"AIzaSyCt85o1Pu9It1xb0Me-awwc8OP8zAzLcUw\" />\r\n\r\n        <activity\r\n            android:name=\".MapsActivity\"\r\n            android:exported=\"true\" />\r\n        <activity android:name=\".CreateReviewActivity\" />\r\n\r\n        <provider\r\n            android:name=\"androidx.core.content.FileProvider\"\r\n            android:authorities=\"com.example.fyp_ilikethatcoffee.fileprovider\"\r\n            android:exported=\"false\"\r\n            android:grantUriPermissions=\"true\">\r\n            <meta-data\r\n                android:name=\"android.support.FILE_PROVIDER_PATHS\"\r\n                android:resource=\"@xml/file_paths\" />\r\n        </provider>\r\n\r\n        <activity android:name=\".ConsumerStoreProfileActivity\" />\r\n        <activity\r\n            android:name=\".AdminActivity\"\r\n            android:exported=\"true\"\r\n            android:label=\"@string/title_activity_admin\" />\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision 406321b96ff28198a1d13d0e9ac2b5068040d8d6)
++++ b/app/src/main/AndroidManifest.xml	(date 1716004648755)
+@@ -8,6 +8,9 @@
+     <uses-permission
+         android:name="android.permission.READ_EXTERNAL_STORAGE"
+         android:maxSdkVersion="32" />
++    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
++    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
++    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+ 
+     <application
+         android:allowBackup="true"
+@@ -19,10 +22,12 @@
+         android:supportsRtl="true"
+         android:theme="@style/Theme.FYPILikeThatCoffee"
+         tools:targetApi="31">
++        <activity
++            android:name=".Dialog.EditStorePostActivity"
++            android:exported="false" />
+         <activity
+             android:name=".ViewStoreProfileActivity"
+             android:exported="false" />
+-        
+         <activity
+             android:name=".HelpActivity"
+             android:exported="false" />
+Index: app/src/main/java/com/example/fyp_ilikethatcoffee/Posts/PostFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.fyp_ilikethatcoffee.Posts;\r\n\r\nimport android.os.Bundle;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.annotation.Nullable;\r\nimport androidx.fragment.app.Fragment;\r\nimport androidx.recyclerview.widget.LinearLayoutManager;\r\nimport androidx.recyclerview.widget.RecyclerView;\r\n\r\n\r\nimport com.example.fyp_ilikethatcoffee.R;\r\nimport com.firebase.ui.firestore.FirestoreRecyclerOptions;\r\nimport com.google.firebase.firestore.CollectionReference;\r\nimport com.google.firebase.firestore.FirebaseFirestore;\r\nimport com.google.firebase.firestore.Query;\r\n\r\npublic class PostFragment extends Fragment {\r\n\r\n    private RecyclerView recyclerView;\r\n    private PostAdapter postAdapter;\r\n    private FirebaseFirestore db = FirebaseFirestore.getInstance();\r\n    private CollectionReference postRef;\r\n    private String userEmail;\r\n    private String storeEmail;\r\n    private Query query;\r\n\r\n    public PostFragment() {\r\n        // Required empty public constructor\r\n    }\r\n\r\n    public static PostFragment newInstance(String storeEmail, String currentUserEmail) {\r\n        PostFragment fragment = new PostFragment();\r\n        Bundle args = new Bundle();\r\n        args.putString(\"storeEmail\", storeEmail);\r\n        args.putString(\"currentUserEmail\", currentUserEmail);\r\n        fragment.setArguments(args);\r\n        return fragment;\r\n    }\r\n\r\n    @Override\r\n    public void onCreate(@Nullable Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n\r\n\r\n        if (getArguments() != null) {\r\n            storeEmail = getArguments().getString(\"storeEmail\");\r\n            userEmail = getArguments().getString(\"currentUserEmail\");\r\n        }\r\n\r\n\r\n    }\r\n\r\n    @Nullable\r\n    @Override\r\n    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {\r\n        View rootView = inflater.inflate(R.layout.fragment_all_posts, container, false);\r\n\r\n        // Initialize Firestore database reference\r\n        postRef = db.collection(\"Post\");\r\n        // Query only the posts belonging to the current store\r\n        query = postRef.whereEqualTo(\"UserAccountId\", storeEmail);\r\n        // Initialize RecyclerView\r\n        recyclerView = rootView.findViewById(R.id.posts_RV);\r\n        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));\r\n\r\n\r\n        // Set up FirestoreRecyclerOptions\r\n        FirestoreRecyclerOptions<Post> options =\r\n                new FirestoreRecyclerOptions.Builder<Post>()\r\n                        .setQuery(query.orderBy(\"DateCreated\", Query.Direction.ASCENDING), Post.class)\r\n                        .build();\r\n\r\n        // Initialize adapter\r\n        postAdapter = new PostAdapter(options, userEmail);\r\n\r\n        // Set adapter to RecyclerView\r\n        recyclerView.setAdapter(postAdapter);\r\n\r\n        return rootView;\r\n    }\r\n\r\n    @Override\r\n    public void onStart() {\r\n        super.onStart();\r\n        // Start listening for data changes when the fragment starts\r\n        recyclerView.getRecycledViewPool().clear();\r\n        postAdapter.notifyDataSetChanged();\r\n        postAdapter.startListening();\r\n    }\r\n\r\n    @Override\r\n    public void onStop() {\r\n        super.onStop();\r\n        // Stop listening for data changes when the fragment stops\r\n        postAdapter.stopListening();\r\n    }\r\n}\r\n/*\r\n\r\npublic class PostFragment extends Fragment {\r\n    private RecyclerView recyclerView;\r\n\r\n    public PostFragment() {\r\n        // Required empty public constructor\r\n    }\r\n\r\n\r\n\r\n    @Override\r\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\r\n                             Bundle savedInstanceState) {\r\n        // Inflate the layout for this fragment\r\n        // Inflate the layout for this fragment\r\n        View rootView = inflater.inflate(R.layout.fragment_all_posts, container, false);\r\n\r\n        RecyclerView rv = (RecyclerView) rootView.findViewById(R.id.posts_RV);\r\n        rv.setHasFixedSize(true);\r\n        PostAdapter adapter = new PostAdapter(new String[]{\"test one\", \"test two\", \"test three\", \"test four\", \"test five\" , \"test six\" , \"test seven\"});\r\n        rv.setAdapter(adapter);\r\n\r\n        LinearLayoutManager llm = new LinearLayoutManager(getActivity());\r\n        rv.setLayoutManager(llm);\r\n\r\n        return rootView;\r\n    }\r\n}\r\n\r\npublic class PostFragment extends Fragment {\r\n\r\n    private RecyclerView recyclerView;\r\n    private PostAdapter postAdapter;\r\n    private FirebaseFirestore db = FirebaseFirestore.getInstance();\r\n    private CollectionReference postRef;\r\n\r\n    public PostFragment() {\r\n        // Required empty public constructor\r\n    }\r\n\r\n    @Override\r\n    public void onCreate(@Nullable Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n\r\n        // Initialize Firestore database reference\r\n        postRef = db.collection(\"Post\");\r\n    }\r\n\r\n    @Nullable\r\n    @Override\r\n    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {\r\n        View rootView = inflater.inflate(R.layout.fragment_all_posts, container, false);\r\n\r\n        // Initialize RecyclerView\r\n        recyclerView = rootView.findViewById(R.id.posts_RV);\r\n        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));\r\n\r\n        // Set up FirestoreRecyclerOptions\r\n        FirestoreRecyclerOptions<Post> options =\r\n                new FirestoreRecyclerOptions.Builder<Post>()\r\n                        .setQuery(postRef, Post.class)\r\n                        .build();\r\n\r\n        // Initialize adapter\r\n        postAdapter = new PostAdapter(options);\r\n\r\n        // Set adapter to RecyclerView\r\n        recyclerView.setAdapter(postAdapter);\r\n\r\n        return rootView;\r\n    }\r\n\r\n    @Override\r\n    public void onStart() {\r\n        super.onStart();\r\n        // Start listening for data changes when the fragment starts\r\n        postAdapter.startListening();\r\n    }\r\n\r\n    @Override\r\n    public void onStop() {\r\n        super.onStop();\r\n        // Stop listening for data changes when the fragment stops\r\n        postAdapter.stopListening();\r\n    }\r\n}\r\n\r\n\r\n\r\n */\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/fyp_ilikethatcoffee/Posts/PostFragment.java b/app/src/main/java/com/example/fyp_ilikethatcoffee/Posts/PostFragment.java
+--- a/app/src/main/java/com/example/fyp_ilikethatcoffee/Posts/PostFragment.java	(revision 406321b96ff28198a1d13d0e9ac2b5068040d8d6)
++++ b/app/src/main/java/com/example/fyp_ilikethatcoffee/Posts/PostFragment.java	(date 1715968928684)
+@@ -71,7 +71,7 @@
+         // Set up FirestoreRecyclerOptions
+         FirestoreRecyclerOptions<Post> options =
+                 new FirestoreRecyclerOptions.Builder<Post>()
+-                        .setQuery(query.orderBy("DateCreated", Query.Direction.ASCENDING), Post.class)
++                        .setQuery(query.orderBy("DateCreated", Query.Direction.DESCENDING), Post.class)
+                         .build();
+ 
+         // Initialize adapter
+Index: app/src/main/java/com/example/fyp_ilikethatcoffee/StoreOwnerUpdateProfileActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.fyp_ilikethatcoffee;\r\n\r\nimport android.app.ProgressDialog;\r\nimport android.content.Intent;\r\nimport android.net.Uri;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\nimport android.widget.EditText;\r\nimport android.widget.ImageView;\r\nimport android.widget.TextView;\r\nimport android.widget.Toast;\r\n\r\nimport androidx.activity.EdgeToEdge;\r\nimport androidx.annotation.NonNull;\r\nimport androidx.annotation.Nullable;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport com.google.android.gms.tasks.OnCompleteListener;\r\nimport com.google.android.gms.tasks.OnFailureListener;\r\nimport com.google.android.gms.tasks.OnSuccessListener;\r\nimport com.google.android.gms.tasks.Task;\r\nimport com.google.firebase.auth.FirebaseAuth;\r\nimport com.google.firebase.auth.FirebaseUser;\r\nimport com.google.firebase.firestore.DocumentReference;\r\nimport com.google.firebase.firestore.FirebaseFirestore;\r\nimport com.google.firebase.storage.FirebaseStorage;\r\nimport com.google.firebase.storage.StorageReference;\r\nimport com.google.firebase.storage.UploadTask;\r\nimport com.squareup.picasso.Picasso;\r\n\r\nimport java.util.HashMap;\r\nimport java.util.Map;\r\n\r\npublic class StoreOwnerUpdateProfileActivity extends AppCompatActivity {\r\n\r\n    private static final int RC_SIGN_IN = 201;\r\n    private static final int PICK_IMAGE_REQUEST = 111;\r\n    private FirebaseAuth auth;\r\n    private FirebaseFirestore db; // Declare Firestore instance\r\n\r\n    private FirebaseStorage storage;\r\n    private StorageReference mImageRef;\r\n\r\n    private Uri imageUri;\r\n\r\n    private FirebaseUser user;\r\n\r\n    private ImageView profile_picture;\r\n    private EditText store_name;\r\n    private EditText store_desc;\r\n    private EditText store_address;\r\n    ProgressDialog progressDialog;\r\n\r\n\r\n    private Button update_button;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        EdgeToEdge.enable(this);\r\n        setContentView(R.layout.activity_update_store_owner_profile);\r\n\r\n\r\n        progressDialog = new ProgressDialog(this);\r\n        progressDialog.setMessage(\"Adding\");\r\n\r\n        auth = FirebaseAuth.getInstance();\r\n        db = FirebaseFirestore.getInstance(); // Initialize Firestore instance\r\n\r\n        store_name = findViewById(R.id.store_name);\r\n        store_desc = findViewById(R.id.store_desc);\r\n        store_address = findViewById(R.id.store_address);\r\n        update_button = findViewById(R.id.update_button);\r\n        mImageRef = FirebaseStorage.getInstance().getReference().child(\"Store Profile Image\");\r\n        getStoreProfileData();\r\n\r\n        profile_picture = findViewById(R.id.store_profile_picture);\r\n        user = auth.getCurrentUser();\r\n        if (user == null){\r\n            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);\r\n            startActivity(intent);\r\n            finish();\r\n        }\r\n\r\n        update_button.setOnClickListener(new View.OnClickListener(){\r\n            @Override\r\n            public void onClick(View v) {\r\n\r\n                updateProfile();\r\n                Intent intent = new Intent(getApplicationContext(), StoreOwnerProfileActivity.class);\r\n                startActivity(intent);\r\n                finish();\r\n            }\r\n        });\r\n\r\n\r\n\r\n        profile_picture.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                selectImageFromGallery();\r\n            }\r\n        });\r\n\r\n    }\r\n\r\n\r\n\r\n    private void selectImageFromGallery() {\r\n        Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);\r\n        startActivityForResult(intent, PICK_IMAGE_REQUEST);\r\n    }\r\n    @Override\r\n    protected void onActivityResult(int requestCode, int resultCode, Intent data) {\r\n        super.onActivityResult(requestCode, resultCode, data);\r\n\r\n        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {\r\n            imageUri = data.getData();\r\n            profile_picture.setImageURI(imageUri);\r\n        }\r\n    }\r\n\r\n    private void getStoreProfileData(){\r\n\r\n        db.collection(\"Store\").document(FirebaseAuth.getInstance().getCurrentUser().getEmail())\r\n                .get().addOnCompleteListener(task -> {\r\n                    if(task.isSuccessful() && task.getResult() != null){\r\n                        String storeName = task.getResult().getString(\"StoreName\");\r\n                        String storeDesc = task.getResult().getString(\"StoreDesc\");\r\n                        String storeAddress = task.getResult().getString(\"StoreAddress\");\r\n                        String image = task.getResult().getString(\"ImageUrl\");\r\n\r\n                        store_name.setText(storeName);\r\n                        store_desc.setText(storeDesc);\r\n                        store_address.setText(storeAddress);\r\n                        Picasso.get().load(image).into(profile_picture);\r\n                    }else{\r\n\r\n                    }\r\n                });\r\n    }\r\n\r\n    private void updateProfile() {\r\n        String storeName = store_name.getText().toString();\r\n        String storeDesc = store_desc.getText().toString();\r\n        String storeAddress = store_address.getText().toString();\r\n\r\n        // Check if a new image is selected\r\n        if (imageUri != null) {\r\n            // Upload the image to Firebase Storage\r\n            String imageName = \"profile_image_\" + System.currentTimeMillis() + \".jpg\";\r\n            StorageReference imageRef = mImageRef.child(imageName);\r\n\r\n            imageRef.putFile(imageUri)\r\n                    .addOnSuccessListener(taskSnapshot -> {\r\n                        // Get the URL of the uploaded image\r\n                        imageRef.getDownloadUrl().addOnSuccessListener(uri -> {\r\n                            String imageUrl = uri.toString();\r\n\r\n                            // Update Firestore document with the new data including the image URL\r\n                            DocumentReference docRef = db.collection(\"Store\").document(user.getEmail());\r\n                            Map<String, Object> updatedData = new HashMap<>();\r\n                            updatedData.put(\"StoreName\", storeName);\r\n                            updatedData.put(\"StoreDesc\", storeDesc);\r\n                            updatedData.put(\"StoreAddress\", storeAddress);\r\n                            updatedData.put(\"ImageUrl\", imageUrl); // Add the image URL\r\n\r\n                            // Update the document with the new data\r\n                            docRef.update(updatedData)\r\n                                    .addOnSuccessListener(aVoid -> {\r\n                                        Toast.makeText(StoreOwnerUpdateProfileActivity.this, \"Store Profile Successfully Updated\", Toast.LENGTH_SHORT).show();\r\n                                    })\r\n                                    .addOnFailureListener(e -> {\r\n                                        Toast.makeText(StoreOwnerUpdateProfileActivity.this, \"Store Profile failed to update\", Toast.LENGTH_SHORT).show();\r\n                                    });\r\n                        });\r\n                    })\r\n                    .addOnFailureListener(e -> {\r\n                        Toast.makeText(StoreOwnerUpdateProfileActivity.this, \"Failed to upload image\", Toast.LENGTH_SHORT).show();\r\n                    });\r\n        } else {\r\n            // If no new image is selected, update Firestore document with other data only\r\n            DocumentReference docRef = db.collection(\"Store\").document(user.getEmail());\r\n            Map<String, Object> updatedData = new HashMap<>();\r\n            updatedData.put(\"StoreName\", storeName);\r\n            updatedData.put(\"StoreDesc\", storeDesc);\r\n            updatedData.put(\"StoreAddress\", storeAddress);\r\n\r\n            docRef.update(updatedData)\r\n                    .addOnSuccessListener(aVoid -> {\r\n                        Toast.makeText(StoreOwnerUpdateProfileActivity.this, \"Store Profile Successfully Updated\", Toast.LENGTH_SHORT).show();\r\n                    })\r\n                    .addOnFailureListener(e -> {\r\n                        Toast.makeText(StoreOwnerUpdateProfileActivity.this, \"Store Profile failed to update\", Toast.LENGTH_SHORT).show();\r\n                    });\r\n        }\r\n    }\r\n\r\n    /*\r\n    private void updateProfile(){\r\n        String storeName = store_name.getText().toString();\r\n        String storeDesc = store_desc.getText().toString();\r\n        String storeAddress = store_address.getText().toString();\r\n        String image = imageUri.toString();\r\n\r\n\r\n        DocumentReference docRef = db.collection(\"Store\").document(user.getEmail());\r\n        // Create a Map object with the updated data\r\n        Map<String, Object> updatedData = new HashMap<>();\r\n        updatedData.put(\"StoreName\", storeName);\r\n        updatedData.put(\"StoreDesc\", storeDesc);\r\n        updatedData.put(\"StoreAddress\", storeAddress);\r\n\r\n        // Update the document with the new data\r\n        docRef.update(updatedData)\r\n                .addOnSuccessListener(new OnSuccessListener<Void>() {\r\n                    @Override\r\n                    public void onSuccess(Void aVoid) {\r\n                        Toast.makeText(StoreOwnerUpdateProfileActivity.this, \"Store Profile Successfully Updated\", Toast.LENGTH_SHORT).show();\r\n                    }\r\n                })\r\n                .addOnFailureListener(new OnFailureListener() {\r\n                    @Override\r\n                    public void onFailure(@NonNull Exception e) {\r\n                        Toast.makeText(StoreOwnerUpdateProfileActivity.this, \"Store Profile failed to update\", Toast.LENGTH_SHORT).show();\r\n                    }\r\n                });\r\n    }\r\n\r\n     */\r\n\r\n\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreOwnerUpdateProfileActivity.java b/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreOwnerUpdateProfileActivity.java
+--- a/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreOwnerUpdateProfileActivity.java	(revision 406321b96ff28198a1d13d0e9ac2b5068040d8d6)
++++ b/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreOwnerUpdateProfileActivity.java	(date 1716003381230)
+@@ -1,12 +1,19 @@
+ package com.example.fyp_ilikethatcoffee;
+ 
++import android.Manifest;
++import android.app.AlertDialog;
+ import android.app.ProgressDialog;
+ import android.content.Intent;
++import android.content.pm.PackageManager;
+ import android.net.Uri;
++import android.os.Build;
+ import android.os.Bundle;
++import android.os.Environment;
++import android.provider.MediaStore;
+ import android.view.View;
+ import android.widget.Button;
+ import android.widget.EditText;
++import android.widget.ImageButton;
+ import android.widget.ImageView;
+ import android.widget.TextView;
+ import android.widget.Toast;
+@@ -15,6 +22,9 @@
+ import androidx.annotation.NonNull;
+ import androidx.annotation.Nullable;
+ import androidx.appcompat.app.AppCompatActivity;
++import androidx.core.app.ActivityCompat;
++import androidx.core.content.ContextCompat;
++import androidx.core.content.FileProvider;
+ 
+ import com.google.android.gms.tasks.OnCompleteListener;
+ import com.google.android.gms.tasks.OnFailureListener;
+@@ -29,13 +39,22 @@
+ import com.google.firebase.storage.UploadTask;
+ import com.squareup.picasso.Picasso;
+ 
++import java.io.File;
++import java.io.IOException;
++import java.text.SimpleDateFormat;
++import java.util.Date;
+ import java.util.HashMap;
++import java.util.Locale;
+ import java.util.Map;
+ 
+ public class StoreOwnerUpdateProfileActivity extends AppCompatActivity {
+ 
+     private static final int RC_SIGN_IN = 201;
+-    private static final int PICK_IMAGE_REQUEST = 111;
++    private static final int PICK_IMAGE_REQUEST = 113;
++    private static final int PERMISSION_REQUEST_CODE = 114;
++
++
++    private static final int REQUEST_IMAGE_CAPTURE = 3;
+     private FirebaseAuth auth;
+     private FirebaseFirestore db; // Declare Firestore instance
+ 
+@@ -45,7 +64,7 @@
+     private Uri imageUri;
+ 
+     private FirebaseUser user;
+-
++    private String currentPhotoPath;
+     private ImageView profile_picture;
+     private EditText store_name;
+     private EditText store_desc;
+@@ -83,6 +102,21 @@
+             finish();
+         }
+ 
++        // Check for permissions
++        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
++            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_IMAGES)
++                    != PackageManager.PERMISSION_GRANTED) {
++                ActivityCompat.requestPermissions(this,
++                        new String[]{Manifest.permission.READ_MEDIA_IMAGES}, PERMISSION_REQUEST_CODE);
++            }
++        } else {
++            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
++                    != PackageManager.PERMISSION_GRANTED) {
++                ActivityCompat.requestPermissions(this,
++                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
++            }
++        }
++
+         update_button.setOnClickListener(new View.OnClickListener(){
+             @Override
+             public void onClick(View v) {
+@@ -99,25 +133,81 @@
+         profile_picture.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+-                selectImageFromGallery();
++                selectImage();
+             }
+         });
+ 
++
++    }
++
++
++
++    private void selectImage() {
++        final CharSequence[] options = {"Take Photo", "Choose from Gallery", "Cancel"};
++        AlertDialog.Builder builder = new AlertDialog.Builder(this);
++        builder.setTitle("Add Photo!");
++        builder.setItems(options, (dialog, item) -> {
++            if ("Take Photo".equals(options[item])) {
++                dispatchTakePictureIntent();
++            } else if ("Choose from Gallery".equals(options[item])) {
++                openGallery();
++            } else {
++                dialog.dismiss();
++            }
++        });
++        builder.show();
+     }
+ 
+ 
+ 
+-    private void selectImageFromGallery() {
+-        Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
++    private File createImageFile() throws IOException {
++        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
++        String imageFileName = "JPEG_" + timeStamp + "_";
++        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
++        File image = File.createTempFile(
++                imageFileName,
++                ".jpg",
++                storageDir
++        );
++        currentPhotoPath = image.getAbsolutePath();
++        return image;
++    }
++
++    private void dispatchTakePictureIntent() {
++        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
++        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
++            File photoFile = null;
++            try {
++                photoFile = createImageFile();
++            } catch (IOException ex) {
++                Toast.makeText(this, "Error occurred while creating the file", Toast.LENGTH_SHORT).show();
++                return;
++            }
++            if (photoFile != null) {
++                Uri photoURI = FileProvider.getUriForFile(this,
++                        "com.example.fyp_ilikethatcoffee.fileprovider",  // Make sure this matches the authority in AndroidManifest.xml
++                        photoFile);
++                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
++                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
++            }
++        }
++    }
++
++    private void openGallery() {
++        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
++        intent.setType("image/*");
+         startActivityForResult(intent, PICK_IMAGE_REQUEST);
+     }
++
+     @Override
+-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
++    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+         super.onActivityResult(requestCode, resultCode, data);
+-
+         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
+             imageUri = data.getData();
+             profile_picture.setImageURI(imageUri);
++        } else if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
++            imageUri = Uri.fromFile(new File(currentPhotoPath));
++            profile_picture.setImageURI(imageUri);
+         }
+     }
+ 
+@@ -141,6 +231,19 @@
+                 });
+     }
+ 
++    @Override
++    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
++        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
++        if (requestCode == PERMISSION_REQUEST_CODE) {
++            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
++                // Permission granted, proceed with accessing external storage
++            } else {
++                // Permission denied, show a message to the user
++                Toast.makeText(this, "Permission to access external storage is required.", Toast.LENGTH_SHORT).show();
++            }
++        }
++    }
++
+     private void updateProfile() {
+         String storeName = store_name.getText().toString();
+         String storeDesc = store_desc.getText().toString();
+Index: app/src/main/java/com/example/fyp_ilikethatcoffee/StoreOwnerHomeActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.fyp_ilikethatcoffee;\r\n\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.view.MenuItem;\r\nimport android.widget.FrameLayout;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport com.google.android.material.bottomnavigation.BottomNavigationView;\r\n\r\npublic class StoreOwnerHomeActivity extends AppCompatActivity {\r\n\r\n    private static final int REQUEST_CODE_CREATE_POST = 1;\r\n    private BottomNavigationView bottomNavigationView;\r\n    private FrameLayout frameLayout;\r\n\r\n    @Override\r\n    protected void onActivityResult(int requestCode, int resultCode, Intent data) {\r\n        super.onActivityResult(requestCode, resultCode, data);\r\n\r\n        if (requestCode == REQUEST_CODE_CREATE_POST) {\r\n            if (resultCode == RESULT_OK && data != null) {\r\n                int selectedItemId = data.getIntExtra(\"selectedItemId\", R.id.navigation_home);\r\n                bottomNavigationView.setSelectedItemId(selectedItemId);\r\n            }\r\n        }\r\n    }\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_store_owner_home);\r\n        bottomNavigationView = findViewById(R.id.bottomNavigationViewHome);\r\n        frameLayout = findViewById(R.id.flFragmentHome);\r\n        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {\r\n            @Override\r\n            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {\r\n\r\n                int itemId = menuItem.getItemId();\r\n\r\n                if (itemId == R.id.navigation_home){\r\n                    startActivity(new Intent(StoreOwnerHomeActivity.this, StoreOwnerHomeActivity.class));\r\n                    return true;\r\n                }\r\n\r\n                if (itemId == R.id.navigation_post){\r\n                    Intent intent = new Intent(StoreOwnerHomeActivity.this, StoreCreatePostActivity.class);\r\n                    startActivityForResult(intent, REQUEST_CODE_CREATE_POST);\r\n                }\r\n\r\n                if (itemId == R.id.navigation_profile){\r\n                    startActivity(new Intent(StoreOwnerHomeActivity.this, StoreOwnerProfileActivity.class));\r\n                }\r\n\r\n                return false;\r\n            }\r\n        });\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreOwnerHomeActivity.java b/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreOwnerHomeActivity.java
+--- a/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreOwnerHomeActivity.java	(revision 406321b96ff28198a1d13d0e9ac2b5068040d8d6)
++++ b/app/src/main/java/com/example/fyp_ilikethatcoffee/StoreOwnerHomeActivity.java	(date 1716024920470)
+@@ -30,20 +30,14 @@
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_store_owner_home);
+-        bottomNavigationView = findViewById(R.id.bottomNavigationViewHome);
+-        frameLayout = findViewById(R.id.flFragmentHome);
++        setContentView(R.layout.activity_test_store_owner_profile);
++        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+             @Override
+             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+ 
+                 int itemId = menuItem.getItemId();
+ 
+-                if (itemId == R.id.navigation_home){
+-                    startActivity(new Intent(StoreOwnerHomeActivity.this, StoreOwnerHomeActivity.class));
+-                    return true;
+-                }
+-
+                 if (itemId == R.id.navigation_post){
+                     Intent intent = new Intent(StoreOwnerHomeActivity.this, StoreCreatePostActivity.class);
+                     startActivityForResult(intent, REQUEST_CODE_CREATE_POST);
+Index: app/src/main/res/layout/activity_store_create_post.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:id=\"@+id/main\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"#515252\"\r\n    tools:context=\".StoreCreatePostActivity\">\r\n\r\n    <androidx.appcompat.widget.Toolbar\r\n        android:id=\"@+id/toolbar_post\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"?attr/actionBarSize\"\r\n        android:background=\"#424242\"\r\n        android:title=\"New Post\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:titleTextColor=\"@android:color/white\" />\r\n\r\n    <EditText\r\n        android:id=\"@+id/post_caption_text\"\r\n        android:layout_width=\"374dp\"\r\n        android:layout_height=\"48dp\"\r\n        android:layout_marginStart=\"16dp\"\r\n        android:layout_marginTop=\"28dp\"\r\n        android:layout_marginEnd=\"16dp\"\r\n        android:ems=\"10\"\r\n        android:hint=\"Your Caption Here\"\r\n        android:inputType=\"text\"\r\n        android:minHeight=\"48dp\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.466\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/post_picture\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/post_picture\"\r\n        android:layout_width=\"409dp\"\r\n        android:layout_height=\"283dp\"\r\n        android:clickable=\"true\"\r\n        android:focusable=\"true\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/toolbar_post\"\r\n        tools:srcCompat=\"@tools:sample/backgrounds/scenic\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/post_button\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"120dp\"\r\n        android:text=\"Post\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/post_caption_text\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/exit_icon\"\r\n        android:layout_width=\"25dp\"\r\n        android:layout_height=\"30dp\"\r\n        android:layout_marginStart=\"8dp\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/toolbar_post\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.615\"\r\n        app:srcCompat=\"@drawable/baseline_cancel_24\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/new_post_label\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"16dp\"\r\n        android:text=\"New Post\"\r\n        android:textColor=\"@color/grey\"\r\n        android:textSize=\"20sp\"\r\n        android:textStyle=\"bold\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/toolbar_post\"\r\n        app:layout_constraintEnd_toEndOf=\"@+id/toolbar_post\"\r\n        app:layout_constraintHorizontal_bias=\"0.447\"\r\n        app:layout_constraintStart_toEndOf=\"@+id/exit_icon\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.0\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/select_image_label\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"Select Image\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/post_picture\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/post_picture\"\r\n        app:layout_constraintTop_toBottomOf=\"@+id/toolbar_post\" />\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_store_create_post.xml b/app/src/main/res/layout/activity_store_create_post.xml
+--- a/app/src/main/res/layout/activity_store_create_post.xml	(revision 406321b96ff28198a1d13d0e9ac2b5068040d8d6)
++++ b/app/src/main/res/layout/activity_store_create_post.xml	(date 1716024516239)
+@@ -19,15 +19,20 @@
+ 
+     <EditText
+         android:id="@+id/post_caption_text"
+-        android:layout_width="374dp"
+-        android:layout_height="48dp"
++        android:layout_width="373dp"
++        android:layout_height="164dp"
+         android:layout_marginStart="16dp"
+         android:layout_marginTop="28dp"
+         android:layout_marginEnd="16dp"
++        android:background="@drawable/rectangle_edittext_bg"
+         android:ems="10"
+-        android:hint="Your Caption Here"
++        android:hint="Your Caption Here..."
++        android:gravity="start|top"
+         android:inputType="text"
+         android:minHeight="48dp"
++        android:maxLength="500"
++        android:paddingStart="10dp"
++        android:paddingTop="5dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.466"
+         app:layout_constraintStart_toStartOf="parent"
+@@ -50,6 +55,7 @@
+         android:layout_height="wrap_content"
+         android:layout_marginTop="120dp"
+         android:text="Post"
++        app:backgroundTint="@color/app_gold_color"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/post_caption_text" />

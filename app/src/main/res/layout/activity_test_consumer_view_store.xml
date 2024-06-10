@@ -1,0 +1,191 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/store_owner_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="729dp"
+        android:background="#515252"
+        tools:context=".StoreOwnerProfileActivity"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <ImageView
+            android:id="@+id/store_pictures"
+            android:layout_width="409dp"
+            android:layout_height="233dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/tabs_store"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:srcCompat="@drawable/coffee_store_generic_photo" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs_store"
+            style="@style/CustomTabLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#3D3E3E"
+            app:layout_constraintTop_toBottomOf="@+id/store_pictures"
+            tools:layout_editor_absoluteX="-2dp" />
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager_store"
+            android:layout_width="412dp"
+            android:layout_height="471dp"
+            android:layout_above="@+id/tabs_store"
+            android:paddingLeft="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabs_store">
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/store_profile_picture_p"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="160dp"
+            android:padding="1dp"
+            android:src="@drawable/store_profile_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/store_pictures"
+            app:shapeAppearanceOverlay="@style/RoundedSquare"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp" />
+
+        <TextView
+            android:id="@+id/store_name_p"
+            android:layout_width="209dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="80dp"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Enter Name"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="10"
+            android:shadowDy="01"
+            android:shadowRadius="10"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/store_pictures"
+            app:layout_constraintEnd_toEndOf="@+id/store_profile_picture_p"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="@+id/store_profile_picture_p"
+            app:layout_constraintTop_toBottomOf="@+id/store_profile_picture_p" />
+
+        <TextView
+            android:id="@+id/store_desc_p"
+            android:layout_width="243dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:hint="Daily Ground is a popular restaurant in Singapore that offers a wide variety of delicious dishes. From classic Singaporean dishes to international cuisine, Daily Ground has something for everyone. The restaurant is known for its fresh ingredients, friendly staff, and great atmosphere. The menu features a variety of dishes, including seafood, noodles, and vegetarian options. The restaurant also offers a selection of wines and beers to complement your meal. Daily Ground is the perfect place to enjoy a meal with friends and family.&quot; "
+            android:maxLines="3"
+            android:paddingBottom="10dp"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="10"
+            android:shadowDy="01"
+            android:shadowRadius="10"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/store_pictures"
+            app:layout_constraintEnd_toEndOf="@+id/store_address_p"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="@+id/store_address_p"
+            app:layout_constraintTop_toBottomOf="@+id/store_address_p"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/store_address_p"
+            android:layout_width="227dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="2dp"
+            android:hint="Enter Address"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="10"
+            android:shadowDy="01"
+            android:shadowRadius="10"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/store_name_p"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="@+id/store_name_p"
+            app:layout_constraintTop_toBottomOf="@+id/store_name_p" />
+
+        <TextView
+            android:id="@+id/more_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="10"
+            android:shadowDy="1"
+            android:shadowRadius="10"
+            android:text="more"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:visibility="gone"
+            android:textColorHint="@color/grey"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/store_desc_p"
+            app:layout_constraintTop_toBottomOf="@+id/store_address_p" />
+
+        <ImageButton
+            android:id="@+id/btnFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/store_pictures"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toEndOf="@+id/store_profile_picture_p"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.100000024"
+            app:srcCompat="@drawable/bookmark_empty" />
+
+        <Button
+            android:id="@+id/createReviewBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="+ Review"
+            app:layout_constraintBottom_toBottomOf="@+id/store_pictures"
+            app:layout_constraintEnd_toStartOf="@+id/btnFavorite"
+            app:layout_constraintHorizontal_bias="0.86"
+            app:layout_constraintStart_toEndOf="@+id/store_profile_picture_p"
+            app:layout_constraintTop_toTopOf="@+id/store_pictures"
+            app:layout_constraintVertical_bias="0.110000014" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

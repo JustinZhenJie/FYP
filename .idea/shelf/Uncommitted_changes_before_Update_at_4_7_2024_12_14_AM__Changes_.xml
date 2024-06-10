@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_4_7_2024_12_14_AM_[Changes]" date="1712420087135" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_7_2024_12_14_AM_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 4/7/2024 12:14 AM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/coffee_store_generic_photo.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_7_2024_12_14_AM_[Changes]/coffee_store_generic_photo.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/edit_pencil.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_7_2024_12_14_AM_[Changes]/edit_pencil.png" />
+  </binary>
+</changelist>

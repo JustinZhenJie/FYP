@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.fyp_ilikethatcoffee.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_discover"
+        android:name="com.example.fyp_ilikethatcoffee.ui.discover.DiscoverFragment"
+        android:label="@string/title_discover"
+        tools:layout="@layout/fragment_discover" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.fyp_ilikethatcoffee.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_stores"
+        android:name="com.example.fyp_ilikethatcoffee.StoresFragment"
+        android:label="Stores"
+        tools:layout="@layout/fragments_stores" />
+
+    <fragment
+        android:id="@+id/navigation_reviews"
+        android:name="com.example.fyp_ilikethatcoffee.ui.notifications.NotificationsFragment"
+        android:label="@string/title_reviews"
+        tools:layout="@layout/fragment_reviews" />
+
+    <fragment
+        android:id="@+id/navigation_chat_list"
+        android:name="com.example.fyp_ilikethatcoffee.ChatListFragment"
+        android:label="Chat List"
+        tools:layout="@layout/fragment_chat_list" />
+
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.example.fyp_ilikethatcoffee.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat" />
+
+    <fragment
+        android:id="@+id/navigation_add_chat"
+        android:name="com.example.fyp_ilikethatcoffee.AddChatFragment"
+        android:label="Start Chat with your Friend"
+        tools:layout="@layout/fragment_add_chat" />
+
+</navigation>

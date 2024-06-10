@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Friend Profile Pic -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewProfilePic"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/img" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <!-- Friend Name -->
+            <TextView
+                android:id="@+id/textViewFriendName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friend Name"
+                android:textStyle="bold" />
+
+            <!-- Message Content  -->
+            <TextView
+                android:id="@+id/textViewLastMessageContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message Content" />
+
+        </LinearLayout>
+
+        <!-- Message Timestamp -->
+        <TextView
+            android:id="@+id/textViewLastMessageTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Message Timestamp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
